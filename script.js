@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.getElementById("nav-links");
 
   if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener("click", function () {
       navLinks.classList.toggle("show");
     });
   }
