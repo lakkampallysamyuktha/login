@@ -110,3 +110,8 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+// Services Page
+function toggleFAQ(element) {
+  let p = element.nextElementSibling;
+  p.style.display = p.style.display === "block" ? "none" : "block";
+}
