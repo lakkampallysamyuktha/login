@@ -1648,6 +1648,21 @@ button {
     padding: 15px;
   }
 }
+
+/*LOGO HEAder part in thnic */
+/* LOGO STYLE */
+.logo img {
+  height: 45px;
+  width: auto;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.logo img:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
+}
 /* ================= FOOTER PREMIUM ================= */
 
 /* ================= FOOTER ================= */
