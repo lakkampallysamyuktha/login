@@ -112,6 +112,23 @@ window.addEventListener("scroll", () => {
 });
 // Services Page
 function toggleFAQ(el) {
-  let p = el.nextElementSibling;
-  p.style.display = p.style.display === "block" ? "none" : "block";
+  const items = document.querySelectorAll(".faq-item");
+
+  items.forEach(item => {
+    if (item !== el.parentElement) {
+      item.classList.remove("active");
+      item.querySelector("p").style.maxHeight = null;
+    }
+  });
+
+  const item = el.parentElement;
+  const p = el.nextElementSibling;
+
+  item.classList.toggle("active");
+
+  if (p.style.maxHeight) {
+    p.style.maxHeight = null;
+  } else {
+    p.style.maxHeight = p.scrollHeight + "px";
+  }
 }
