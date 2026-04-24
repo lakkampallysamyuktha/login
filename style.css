@@ -1086,6 +1086,90 @@ html, body {
   }
 
 }
+/*Service Page  */
+/* ================= PREMIUM SERVICES ================= */
+.services {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(135deg,#f8fafc,#eef2ff);
+}
+
+.services h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #0f172a;
+}
+
+/* GRID */
+.services .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* CARD */
+.services .card {
+  background: white;
+  padding: 30px;
+  border-radius: 18px;
+
+  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+  transition: 0.4s;
+
+  position: relative;
+  overflow: hidden;
+}
+
+/* HOVER EFFECT */
+.services .card:hover {
+  transform: translateY(-10px);
+}
+
+/* GLOW BORDER EFFECT */
+.services .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 1px;
+
+  background: linear-gradient(45deg,#6366f1,#3b82f6);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.services .card:hover::before {
+  opacity: 1;
+}
+
+/* ICON */
+.icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+/* TITLE */
+.services .card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+/* TEXT */
+.services .card p {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
 /* ================= FOOTER ================= */
 
 .footer {
