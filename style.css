@@ -11,17 +11,7 @@ html, body {
 }
 
 /* ================= NAVBAR ================= */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-background: #0f172a;
- color: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: #0f172a; color: white; position: sticky; top: 0; z-index: 1000; }
 
 .logo {
   color: #6366f1;
