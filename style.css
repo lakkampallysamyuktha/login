@@ -1191,6 +1191,9 @@ html, body {
 .price-card.popular {
   border: 2px solid #2563eb;
 }
+.price-card:hover {
+  transform: translateY(-5px);
+}
 
 /* ===== TECH ===== */
 .tech {
