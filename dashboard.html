@@ -1,15 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>User Dashboard</title>
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <h1 id="welcomeUser">Welcome User 🎉</h1>
+<div class="main">
 
-  <button onclick="logout()">Logout</button>
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>STACKLY</h2>
 
+    <!-- LINKS FIXED -->
+    <a class="active" href="dashboard.html">Dashboard</a>
+    <a href="404.html">Projects</a>
+    <a href="404.html">Analytics</a>
+    <a href="404.html">Team</a>
+    <a href="404.html">Settings</a>
+
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+
+    <div class="topbar">
+      <input type="text" placeholder="Search projects...">
+      <div class="user">John Doe</div>
+    </div>
+
+    <h1>Overview Dashboard</h1>
+
+    <div class="dashboard-cards">
+
+      <div class="dashboard-card">
+        <h3>Total Projects</h3>
+        <h1>24</h1>
+        <p class="green">↑ 12% from last month</p>
+      </div>
+
+      <div class="dashboard-card">
+        <h3>Active Tasks</h3>
+        <h1>145</h1>
+        <p class="red">↓ 5% from last month</p>
+      </div>
+
+      <div class="dashboard-card">
+        <h3>Team Members</h3>
+        <h1>48</h1>
+        <p class="green">↑ 2 new this week</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
   <script src="script.js"></script>
-
 </body>
 </html>
+
