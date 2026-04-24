@@ -28,7 +28,7 @@ function login() {
   let password = document.getElementById("loginPassword").value.trim();
    let role = document.getElementById("loginRole").value.trim();
 
-   if (!name || !email || !password || !role) {
+   if (!name || !email ) {
     alert("Fill all fields ❌");
     return;
   }
