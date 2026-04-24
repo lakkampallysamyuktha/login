@@ -1230,8 +1230,10 @@ html, body {
   }
 /* ================= FOOTER PREMIUM ================= */
 
+/* ================= FOOTER ================= */
+
 .footer {
-  background: linear-gradient(135deg, #0f172a, #020617);
+  background: linear-gradient(135deg,#020617,#0f172a);
   color: #cbd5f5;
   padding: 60px 20px 20px;
 }
@@ -1242,12 +1244,12 @@ html, body {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  gap: 50px;
 }
 
 /* LOGO */
 .footer .logo {
-  color: #3b82f6;
+  color: #38bdf8;
   font-size: 24px;
   margin-bottom: 15px;
 }
@@ -1255,23 +1257,24 @@ html, body {
 /* TEXT */
 .footer-box p {
   font-size: 14px;
-  line-height: 1.7;
   color: #94a3b8;
+  line-height: 1.7;
 }
 
 /* HEADINGS */
 .footer-box h3 {
   color: white;
   margin-bottom: 15px;
+  font-size: 18px;
   position: relative;
 }
 
-/* SMALL LINE */
+/* LINE UNDER TITLE */
 .footer-box h3::after {
   content: "";
   width: 40px;
   height: 2px;
-  background: #3b82f6;
+  background: #38bdf8;
   position: absolute;
   left: 0;
   bottom: -6px;
@@ -1287,40 +1290,36 @@ html, body {
 }
 
 .footer-box a:hover {
-  color: #3b82f6;
+  color: #38bdf8;
   padding-left: 6px;
+}
+
+/* SERVICES TEXT */
+.footer-box p {
+  margin-bottom: 8px;
 }
 
 /* SOCIAL ICONS */
 .social-icons {
-  margin-top: 15px;
   display: flex;
   gap: 12px;
+  margin-top: 15px;
 }
 
 .social-icons a {
   width: 38px;
   height: 38px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255,255,255,0.05);
-  border-radius: 50%;
   transition: 0.3s;
-  font-size: 16px;
 }
 
 .social-icons a:hover {
-  background: #3b82f6;
-  color: white;
+  background: #38bdf8;
   transform: translateY(-5px);
-}
-
-/* CONTACT ICON ALIGN */
-.footer-box p {
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 /* BOTTOM */
@@ -1331,4 +1330,27 @@ html, body {
   padding-top: 15px;
   font-size: 14px;
   color: #94a3b8;
+}
+/*Mobile View  */
+@media (max-width: 768px) {
+
+  .footer {
+    padding: 50px 15px 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-box h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
 }
