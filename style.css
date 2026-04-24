@@ -1088,18 +1088,20 @@ html, body {
 }
 /*Service Page  */
 /* ================= PREMIUM SERVICES ================= */
+/* SECTION */
 .services {
-  padding: 90px 20px;
+  padding: 100px 20px;
   text-align: center;
   background: linear-gradient(135deg,#f8fafc,#eef2ff);
 }
 
+/* TITLE */
 .services h2 {
-  font-size: 36px;
-  margin-bottom: 50px;
+  font-size: 40px;
+  margin-bottom: 60px;
   color: #0f172a;
+  font-weight: 700;
 }
-
 /* GRID */
 .services .grid {
   display: grid;
@@ -1109,17 +1111,20 @@ html, body {
   margin: auto;
 }
 
-/* CARD */
 .services .card {
   background: white;
   padding: 30px;
   border-radius: 18px;
 
-  box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+  box-shadow: 0 15px 50px rgba(0,0,0,0.08);
   transition: 0.4s;
 
   position: relative;
   overflow: hidden;
+}
+
+.services .card:hover {
+  transform: translateY(-12px) scale(1.02);
 }
 
 /* HOVER EFFECT */
@@ -1169,6 +1174,60 @@ html, body {
   color: #6b7280;
   line-height: 1.6;
 }
+
+@media (max-width: 768px) {
+
+  .services {
+    padding: 70px 15px;
+  }
+
+  .services h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .services .grid {
+    gap: 20px;
+  }
+
+  .services .card {
+    padding: 20px;
+    border-radius: 14px;
+  }
+
+  .services .card h3 {
+    font-size: 18px;
+  }
+
+  .services .card p {
+    font-size: 13px;
+  }
+
+}
+.footer-container {
+    grid-template-columns: 1fr;   /* 🔥 stack */
+    gap: 25px;
+    text-align: center;
+  }
+
+  .footer-box {
+    padding: 10px 0;
+  }
+
+  .footer-box h2,
+  .footer-box h3 {
+    font-size: 18px;
+  }
+
+  .footer-box p,
+  .footer-box a {
+    font-size: 14px;
+  }
+
+  /* SOCIAL CENTER */
+  .social-icons {
+    justify-content: center;
+  }
 
 /* ================= FOOTER ================= */
 
