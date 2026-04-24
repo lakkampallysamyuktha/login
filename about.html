@@ -1,109 +1,152 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>About Us</title>
+  <title>About Stackly</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ===== NAVBAR ===== -->
 <header class="navbar">
   <h2 class="logo">STACKLY</h2>
 
-  <!-- HAMBURGER -->
-  <div class="menu-toggle" id="menu-toggle">
-    ☰
-  </div>
+  <div class="menu-toggle" id="menu-toggle">☰</div>
 
-  <!-- MENU -->
   <nav class="nav-links" id="nav-links">
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
+    <a href="about.html" class="active">About</a>
     <a href="services.html">Services</a>
     <a href="blog.html">Blog</a>
     <a href="contact.html">Contact</a>
-    <a href="login.html" class="login-btn">Login</a>
+    <a href="login.html" class="btn">Login</a>
   </nav>
 </header>
 
-<!-- ABOUT SECTION -->
-<section class="about-section">
+<!-- ===== HERO ===== -->
+<section class="about-hero">
+  <h1>About Stackly</h1>
+  <p>Pioneering digital solutions with innovation & trust</p>
+</section>
 
-  <div class="about-container">
+<!-- ===== ABOUT PREMIUM ===== -->
+<section class="about-premium fade-in">
+  <div class="about-wrapper">
 
-    <!-- LEFT IMAGE -->
-    <div class="about-image">
+    <div class="about-img">
+      <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=900&auto=format&fit=crop" alt="team">
+    </div>
 
-  <picture>
-    <!-- WEBP -->
-    <source 
-      srcset="https://images.unsplash.com/photo-1551434678-e076c223a692?q=75&w=800&fm=webp"
-      type="image/webp"
-    >
-
-    <!-- FALLBACK JPG -->
-    <img 
-      src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800&auto=format&fit=crop"
-      alt="IT team working"
-      loading="lazy"
-      width="600"
-      height="400"
-    >
-  </picture>
-
-</div>
-
-    <!-- RIGHT CONTENT -->
     <div class="about-content">
+      <p class="about-tag">Discover Our Journey</p>
+      <h2>Driven by Passion,<br>Built on Trust.</h2>
 
-      <h1>About Stackly 🚀</h1>
-      <p class="subtitle">Building smart IT solutions for modern businesses</p>
-
-      <h2>Who We Are</h2>
       <p>
-        Stackly IT Solutions is a technology-driven company delivering innovative
-        web, mobile, and cloud-based solutions.
+        Stackly started with a mission to simplify technology. Today we deliver
+        scalable, secure, and high-performance digital solutions across industries.
       </p>
 
-      <h2>Our Mission</h2>
-      <p>Empower businesses with cutting-edge technology.</p>
-
-      <h2>Our Vision</h2>
-      <p>To become a global leader in IT solutions.</p>
-
-      <ul class="about-list">
-        <li>Proven Track Record</li>
-        <li>Expert Developers</li>
-        <li>24/7 Support</li>
+      <ul class="about-features">
+        <li>✔ Proven Track Record</li>
+        <li>✔ Expert Developers</li>
+        <li>✔ 24/7 Premium Support</li>
       </ul>
 
+      <a href="services.html" class="about-btn">Explore Services →</a>
     </div>
 
   </div>
-
-  <!-- STATS -->
-  <div class="stats">
-    <div class="stat-box">
-      <h3>50+</h3>
-      <p>Projects</p>
-    </div>
-
-    <div class="stat-box">
-      <h3>30+</h3>
-      <p>Clients</p>
-    </div>
-
-    <div class="stat-box">
-      <h3>5+</h3>
-      <p>Years</p>
-    </div>
-  </div>
-
 </section>
+
+<!-- ===== STATS ===== -->
+<section class="stats">
+  <div>
+    <h2>50+</h2>
+    <p>Projects</p>
+  </div>
+  <div>
+    <h2>30+</h2>
+    <p>Clients</p>
+  </div>
+  <div>
+    <h2>5+</h2>
+    <p>Years</p>
+  </div>
+</section>
+
+<!-- ===== VALUES ===== -->
+<section class="values fade-in">
+  <h2>Our Core Values</h2>
+
+  <div class="values-grid">
+    <div class="value-card active">
+      <i class="fas fa-lightbulb"></i>
+      <h3>Innovation</h3>
+      <p>We solve complex challenges creatively.</p>
+    </div>
+
+    <div class="value-card">
+      <i class="fas fa-handshake"></i>
+      <h3>Integrity</h3>
+      <p>Transparent and honest work culture.</p>
+    </div>
+
+    <div class="value-card">
+      <i class="fas fa-users"></i>
+      <h3>Collaboration</h3>
+      <p>Teamwork builds great solutions.</p>
+    </div>
+
+    <div class="value-card">
+      <i class="fas fa-shield-alt"></i>
+      <h3>Security</h3>
+      <p>Security-first approach always.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TEAM ===== -->
+<section class="team fade-in">
+  <h2>Meet Our Team</h2>
+
+  <div class="team-grid">
+
+    <div class="team-card">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg">
+      <h3>James Carter</h3>
+      <p>CEO</p>
+    </div>
+
+    <div class="team-card">
+      <img src="https://randomuser.me/api/portraits/women/44.jpg">
+      <h3>Amanda Lee</h3>
+      <p>CTO</p>
+    </div>
+
+    <div class="team-card">
+      <img src="https://randomuser.me/api/portraits/men/65.jpg">
+      <h3>Robert Fox</h3>
+      <p>Security Lead</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <h2>Be Part of Our Journey</h2>
+  <p>Join our team and build the future</p>
+  <a href="#" class="btn">View Open Positions</a>
+</section>
+
 <footer class="footer">
 
   <div class="footer-container">
