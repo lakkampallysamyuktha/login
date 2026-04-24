@@ -1,18 +1,390 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Home</title>
+  <meta charset="UTF-8">
+  <title>STACKLY - IT Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="auth-page">
 
-  <div class="auth-box">
-    <h2>Welcome</h2>
+<body>
 
-    <a href="login.html"><button>Login</button></a>
-    <br><br>
-    <a href="signup.html"><button>Signup</button></a>
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+  <h2 class="logo">STACKLY</h2>
+
+  <!-- HAMBURGER -->
+  <div class="menu-toggle" id="menu-toggle">
+    ☰
   </div>
 
+  <!-- MENU -->
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+        <a href="login.html"><button>Login</button></a>
+    <a href="signup.html"><button>Signup</button></a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Empowering Businesses Through Technology</h1>
+    <p>
+      We deliver modern IT solutions that help companies scale faster,
+      improve efficiency, and stay ahead in the digital world.
+    </p>
+
+    <div class="hero-buttons">
+      <a class="btn">Explore Services</a>
+      <a class="btn outline">Get a Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="about">
+
+  <div class="about-container">
+
+    <!-- LEFT TEXT -->
+    <div class="about-text">
+      <h2>Who We Are</h2>
+
+      <p>
+        Stackly is a forward-thinking IT solutions company focused on building
+        scalable, secure, and high-performance applications. We help startups,
+        enterprises, and businesses transform their ideas into digital success.
+      </p>
+
+      <p>
+        Our team consists of experienced developers, designers, and engineers
+        passionate about innovation and technology.
+      </p>
+
+    <ul class="about-list">
+  <li>Proven Track Record of Success</li>
+  <li>Highly Skilled Certified Experts</li>
+  <li>24/7 Premium Support</li>
+</ul>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="about-image">
+      <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="team">
+    </div>
+
+  </div>
+
+</section>
+<a href="about.html" class="btn about-btn">More About Us →</a>
+
+<!-- ================= SERVICES ================= -->
+<section class="services-section">
+
+  <h2 class="section-title">Our Core Services</h2>
+
+  <div class="services-grid">
+
+    <!-- CARD 1 -->
+    <div class="card">
+      <div class="service-icon">
+        <i class="fas fa-cloud"></i>
+      </div>
+      <h3>Cloud Computing</h3>
+      <p>Seamless migration and management of multi-cloud architectures to enhance scalability.</p>
+      <a href="services.html" class="read-more">Read More →</a>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card active">
+      <div class="service-icon">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+      <h3>Cybersecurity</h3>
+      <p>Advanced threat protection and infrastructure security to safeguard your data assets.</p>
+      <a href="services.html" class="read-more">Read More →</a>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card">
+      <div class="service-icon">
+        <i class="fas fa-code"></i>
+      </div>
+      <h3>Custom Software Dev</h3>
+      <p>Tailor-made software solutions engineered for performance and reliability.</p>
+      <a href="services.html" class="read-more">Read More →</a>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section class="why-section">
+
+  <h2>Why Choose Us</h2>
+  <p class="subtitle">
+    We go above and beyond to ensure our clients receive the best
+    technological solutions available in the market.
+  </p>
+
+  <div class="why-container">
+
+    <div class="why-box">
+      <i class="fa-solid fa-bolt"></i>
+      <h3>Fast Execution</h3>
+      <p>Agile methodologies ensuring rapid delivery.</p>
+    </div>
+
+    <div class="why-box">
+      <i class="fa-solid fa-headset"></i>
+      <h3>Expert Support</h3>
+      <p>Dedicated engineers ready to assist anytime.</p>
+    </div>
+
+    <div class="why-box">
+      <i class="fa-solid fa-bullseye"></i>
+      <h3>Result Oriented</h3>
+      <p>Focusing on metrics that matter to your ROI.</p>
+    </div>
+
+    <div class="why-box">
+      <i class="fa-solid fa-lock"></i>
+      <h3>High Security</h3>
+      <p>Enterprise-grade security integrations built-in.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= STATS ================= -->
+<section class="stats">
+  <div>
+    <h1>500+</h1>
+    <p>Projects Completed</p>
+  </div>
+
+  <div>
+    <h1>120+</h1>
+    <p>IT Experts</p>
+  </div>
+
+  <div>
+    <h1>98%</h1>
+    <p>Client Satisfaction</p>
+  </div>
+
+  <div>
+    <h1>15+</h1>
+    <p>Years Experience</p>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIAL ================= -->
+<section class="testimonial-section">
+
+  <p class="small-title">Real Stories</p>
+  <h2>What Our Clients Say</h2>
+
+  <div class="testimonial-container">
+
+    <div class="testimonial-card">
+      <p>
+        "Stackly transformed our outdated infrastructure into a seamless,
+        highly scalable cloud engine. Their team is simply phenomenal."
+      </p>
+
+      <div class="testimonial-user">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg">
+        <div>
+          <h4>Michael Roberts</h4>
+          <span>CTO, FinTech Global</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <p>
+        "We rely on Stackly for all our cybersecurity needs. I can sleep
+        peacefully knowing our data is protected."
+      </p>
+
+      <div class="testimonial-user">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg">
+        <div>
+          <h4>Sarah Jenkins</h4>
+          <span>CEO, HealthPlus</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <p>
+        "From design to deployment, the app development journey was smooth,
+        agile, and totally professional."
+      </p>
+
+      <div class="testimonial-user">
+        <img src="https://randomuser.me/api/portraits/men/12.jpg">
+        <div>
+          <h4>David Chen</h4>
+          <span>Founder, StartUp Hub</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= BLOG ================= -->
+<section class="blog-section">
+
+  <p class="small-title">Our News</p>
+  <h2>Latest Insights</h2>
+
+  <div class="blog-container">
+
+    <!-- CARD 1 -->
+    <div class="blog-card">
+      <div class="blog-img">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+      </div>
+
+      <div class="blog-content">
+        <div class="blog-meta">
+          <span>📅 April 26, 2025</span>
+          <span>👤 Admin</span>
+        </div>
+
+        <h3>Top 5 Cybersecurity Threats in 2026</h3>
+        <p>Discover the latest cyber threats and how to protect your business.</p>
+
+        <a href="blog.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="blog-card">
+      <div class="blog-img">
+        <img src="https://images.unsplash.com/photo-1464802686167-b939a6910659">
+      </div>
+
+      <div class="blog-content">
+        <div class="blog-meta">
+          <span>📅 April 15, 2025</span>
+          <span>👤 Tech Team</span>
+        </div>
+
+        <h3>Why Cloud Migration is Important</h3>
+        <p>Learn how cloud computing helps businesses scale faster.</p>
+
+        <a href="blog.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="blog-card">
+      <div class="blog-img">
+        <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
+      </div>
+
+      <div class="blog-content">
+        <div class="blog-meta">
+          <span>📅 May 28, 2025</span>
+          <span>👤 HR</span>
+        </div>
+
+        <h3>Building Strong IT Teams</h3>
+        <p>Best practices to build a modern remote IT team.</p>
+
+        <a href="blog.html" class="read-more">Read More →</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<!-- ================= CTA ================= -->
+<section class="cta">
+  <div class="cta-content">
+    <h2>Ready to Transform Your Business?</h2>
+    <p>Contact us today and let's build something amazing together.</p>
+    <a href="contact.html" class="cta-btn">Get Started</a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- LEFT -->
+    <div class="footer-box">
+      <h2 class="logo">STACKLY</h2>
+      <p>
+        We provide comprehensive IT solutions and services helping businesses grow with technology.
+      </p>
+
+      <!-- SOCIAL -->
+      <div class="social-icons">
+        <a href="#">🌐</a>
+        <a href="#">🐦</a>
+        <a href="#">💼</a>
+        <a href="#">📸</a>
+      </div>
+    </div>
+
+    <!-- QUICK LINKS -->
+    <div class="footer-box">
+      <h3>Quick Links</h3>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-box">
+      <h3>Services</h3>
+      <p>Cloud Computing</p>
+      <p>Cybersecurity</p>
+      <p>Custom Software</p>
+      <p>IT Consulting</p>
+      <p>Data Analytics</p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-box">
+      <h3>Contact Info</h3>
+      <p>📍 Hyderabad, India</p>
+      <p>📞 +91 9876543210</p>
+      <p>📧 info@stackly.com</p>
+      <p>🕒 Mon - Fri, 9AM - 6PM</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Stackly Technology. All Rights Reserved.
+  </div>
+
+</footer>
+<script src="script.js"></script>
 </body>
-</html>
+</html> 
+
+
