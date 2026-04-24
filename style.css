@@ -59,34 +59,58 @@
 }
 
 /* ================= MOBILE ================= */
-/* ================= NAVBAR MOBILE FIX ================= */
+/* STOP SIDE SCROLL */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* GLOBAL SAFETY */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* REMOVE FIXED WIDTHS */
+.blog-card,
+.card,
+.contact-box {
+  width: 100% !important;
+  max-width: 100%;
+}
+
+/* FIX CONTAINERS */
+.blog-section,
+.contact-section,
+.about-container,
+.footer-container,
+.services .grid {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* GRID FIX (REAL RESPONSIVE) */
+.services-grid,
+.blog-container,
+.testimonial-container,
+.why-container {
+}
+
+/* MOBILE CLEAN STACK */
 @media (max-width: 768px) {
 
-  .menu-toggle {
-    display: block;
-  }
+  /* FORCE SINGLE COLUMN */
+  .services-grid,
+  .blog-container,
+  .testimonial-container,
+  .why-container,
+  .footer-container {
+    grid-template-columns: 1fr !important;
+  }
 
-  .nav-links {
-    position: fixed;
-    top: 60px;
-    right: -100%;
-    width: 220px;
-    height: calc(100vh - 60px);
-
-    background: #0f172a;
-
-    flex-direction: column;
-    padding: 20px;
-    gap: 15px;
-
-    transition: 0.3s;
-    z-index: 999;
-  }
-
-  .nav-links.show {
-    right: 0;
-  }
-}
 /* ================= HERO ================= */
 .hero {
   height: 90vh;
