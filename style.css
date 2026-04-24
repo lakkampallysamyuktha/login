@@ -234,37 +234,28 @@ html, body {
     align-items: center;
   }
 }
+/*About who we are tel  */
 /* ================= ABOUT ================= */
 .about {
   padding: 80px 20px;
   background: #f8fafc;
 }
-/* ================= ABOUT ================= */
-.about {
-  padding: 80px 20px;
-}
 
-
-.about-btn {
-  display: block;          /* important */
-  width: fit-content;      /* keeps button size */
-  margin: 30px auto 0;     
-}
-
-.about-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(99,102,241,0.3);
-}
+/* CONTAINER */
 .about-container {
   max-width: 1100px;
   margin: auto;
+
   display: flex;
   align-items: center;
   gap: 50px;
+  flex-wrap: wrap; /* ✅ IMPORTANT (prevents overflow) */
 }
 
+/* TEXT */
 .about-text {
   flex: 1;
+  min-width: 280px; /* ✅ mobile safety */
 }
 
 .about-text h2 {
@@ -275,27 +266,10 @@ html, body {
 .about-text p {
   margin-bottom: 15px;
   color: #4b5563;
+  line-height: 1.6;
 }
 
-.about-text ul {
-  margin-top: 10px;
-}
-
-.about-text li {
-  margin-bottom: 8px;
-}
-
-/* IMAGE FIX */
-.about-image {
-  flex: 1;
-}
-
-.about-image img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
-
+/* LIST */
 .about-list {
   list-style: none;
   padding: 0;
@@ -311,7 +285,7 @@ html, body {
   color: #374151;
 }
 
-/* BLUE CIRCLE + CHECK */
+/* ICON */
 .about-list li::before {
   content: "✔";
   display: flex;
@@ -329,6 +303,59 @@ html, body {
   flex-shrink: 0;
 }
 
+/* IMAGE */
+.about-image {
+  flex: 1;
+  min-width: 280px; /* ✅ prevents shrink bug */
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transition: 0.4s ease;
+}
+
+/* HOVER */
+.about-image img:hover {
+  transform: scale(1.03);
+}
+
+/* BUTTON */
+.about-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #2563eb;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.about-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37,99,235,0.3);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .about-container {
+    flex-direction: column; /* ✅ STACK */
+    text-align: center;
+  }
+
+  .about-text h2 {
+    font-size: 26px;
+  }
+
+  .about-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+}
 /* ================= SERVICES ================= */
 /* ================= SERVICES SECTION ================= */
 
