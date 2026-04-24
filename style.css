@@ -941,70 +941,117 @@ html, body {
 
 
 /*About page  */
-/* ================= ABOUT PAGE ================= */
+/* ================= ABOUT PREMIUM ================= */
 
 .about-section {
   padding: 80px 20px;
+  background: #f8fafc;
+}
+
+.about-container {
   max-width: 1100px;
   margin: auto;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 50px;
 }
 
-/* TITLE */
-.about-section h1 {
-  font-size: 38px;
+/* IMAGE */
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  transition: 0.4s;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* CONTENT */
+.about-content {
+  flex: 1;
+}
+
+.about-content h1 {
+  font-size: 36px;
   margin-bottom: 10px;
-  color: #0f172a;
 }
 
-.about-section > p {
+.subtitle {
   color: #6b7280;
-  margin-bottom: 40px;
-  font-size: 16px;
+  margin-bottom: 20px;
 }
 
-/* HEADINGS */
-.about-section h2 {
-  margin-top: 30px;
-  font-size: 24px;
+.about-content h2 {
+  margin-top: 20px;
+  font-size: 22px;
   color: #111827;
 }
 
-/* PARAGRAPHS */
-.about-section p {
+.about-content p {
+  margin-top: 8px;
   color: #4b5563;
-  margin-top: 10px;
   line-height: 1.6;
+}
+
+/* LIST */
+.about-list {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.about-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ICON CIRCLE */
+.about-list li::before {
+  content: "✔";
+  background: #3b82f6;
+  color: white;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 12px;
 }
 
 /* ================= STATS ================= */
 
 .stats {
+  margin-top: 60px;
   display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 .stat-box {
-  flex: 1;
-  min-width: 200px;
-  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  background: linear-gradient(135deg,#6366f1,#3b82f6);
   color: white;
   padding: 30px;
-  border-radius: 12px;
+  border-radius: 14px;
   text-align: center;
+  min-width: 180px;
   transition: 0.3s;
 }
 
 .stat-box h3 {
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .stat-box p {
   font-size: 14px;
-  opacity: 0.9;
 }
 
 .stat-box:hover {
@@ -1012,45 +1059,44 @@ html, body {
   box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-/* ================= NAVBAR FIX ================= */
+/* ================= ANIMATION ================= */
 
-.login-btn {
-  padding: 6px 14px;
-  border: 1px solid #6366f1;
-  border-radius: 6px;
-  color: white;
+.about-container,
+.stat-box {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
 }
 
-.login-btn:hover {
-  background: #6366f1;
+.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ================= MOBILE ================= */
 
 @media (max-width: 768px) {
 
-  .about-section {
-    padding: 60px 15px;
+  .about-container {
+    flex-direction: column;
     text-align: left;
   }
 
-  .about-section h1 {
+  .about-content h1 {
     font-size: 28px;
-  }
-
-  .about-section h2 {
-    font-size: 20px;
   }
 
   .stats {
     flex-direction: column;
+    align-items: center;
   }
 
   .stat-box {
     width: 100%;
+    max-width: 300px;
   }
-}
 
+}
 /* ================= FOOTER ================= */
 
 .footer {
