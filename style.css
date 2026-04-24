@@ -1170,6 +1170,212 @@ body.dark .image-card {
   }
 
 }
+
+/*Services page  */
+/* HERO */
+.services-hero {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 42px;
+}
+
+.hero-content span {
+  color: #2563eb;
+}
+
+.small-text {
+  color: #64748b;
+}
+
+.sub-text {
+  max-width: 600px;
+  margin: 10px auto;
+  color: #64748b;
+}
+
+/* SERVICE SECTION */
+.service-section {
+  padding: 80px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+/* TEXT */
+.content h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  color: #64748b;
+  margin-bottom: 15px;
+}
+
+.content ul {
+  list-style: none;
+}
+
+.content li {
+  margin-bottom: 8px;
+}
+
+/* BUTTON */
+.content button {
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 🔥 IMAGE CARD (SQUARE + BORDER) */
+.image-card {
+  width: 260px;
+  height: 260px;
+  padding: 10px;
+  background: white;
+  border-radius: 16px;
+  border: 2px solid #e2e8f0;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* HOVER EFFECT */
+.image-card:hover {
+  transform: scale(1.05);
+  border-color: #2563eb;
+}
+
+/* PRICING */
+.pricing {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.price-card {
+  background: white;
+  padding: 25px;
+  width: 280px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.price-card h1 {
+  color: #2563eb;
+}
+
+.price-card span {
+  font-size: 14px;
+}
+
+.price-card button {
+  margin-top: 10px;
+  padding: 10px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+}
+
+.price-card.popular {
+  border: 2px solid #2563eb;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+}
+
+/* TECH */
+.tech {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.tech-grid div {
+  padding: 12px 20px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.tech-grid div:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* FAQ */
+.faq {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.faq-item h3 {
+  background: #e2e8f0;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.faq-item p {
+  display: none;
+  padding: 10px;
+  color: #475569;
+}
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .image-card {
+    width: 200px;
+    height: 200px;
+  }
+
+}
 /* ================= FOOTER PREMIUM ================= */
 
 /* ================= FOOTER ================= */
