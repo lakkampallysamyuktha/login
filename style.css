@@ -124,7 +124,7 @@ img {
   .nav-links {
     position: fixed;
     top: 60px;
-    right: -100%;
+    right: 0;
     width: 220px;
     height: calc(100vh - 60px);
     background: #0f172a;
