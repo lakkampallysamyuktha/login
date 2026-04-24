@@ -111,4 +111,15 @@ window.addEventListener("scroll", () => {
   });
 });
 // Services Page
+// ===== FAQ TOGGLE =====
+function toggleFAQ(el) {
+  const content = el.nextElementSibling;
 
+  // close all other FAQs
+  document.querySelectorAll(".faq-item p").forEach(p => {
+    if (p !== content) p.style.display = "none";
+  });
+
+  // toggle clicked one
+  content.style.display = content.style.display === "block" ? "none" : "block";
+}
