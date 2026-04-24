@@ -8,14 +8,21 @@
 
 <body>
 
+<!-- 🔐 PROTECT PAGE -->
+<script>
+  let user = JSON.parse(localStorage.getItem("currentUser"));
+  if (!user) {
+    window.location.href = "login.html";
+  }
+</script>
+
 <div class="main">
 
   <!-- SIDEBAR -->
   <div class="sidebar">
     <h2>STACKLY</h2>
 
-    <!-- LINKS FIXED -->
-    <a class="active" href="dashboard.html">Dashboard</a>
+    <a class="active">Dashboard</a>
     <a href="404.html">Projects</a>
     <a href="404.html">Analytics</a>
     <a href="404.html">Team</a>
@@ -27,13 +34,26 @@
   <!-- MAIN CONTENT -->
   <div class="content">
 
+    <!-- TOPBAR -->
     <div class="topbar">
+
+      <!-- SEARCH -->
       <input type="text" placeholder="Search projects...">
-      <div class="user">John Doe</div>
+
+      <!-- 👇 UPDATED USER PROFILE -->
+      <div class="profile">
+        <div class="user-text">
+          <span id="userName"></span>
+          <small id="userRole"></small>
+        </div>
+        <img src="https://i.pravatar.cc/40" alt="user">
+      </div>
+
     </div>
 
     <h1>Overview Dashboard</h1>
 
+    <!-- CARDS -->
     <div class="dashboard-cards">
 
       <div class="dashboard-card">
@@ -61,5 +81,6 @@
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
