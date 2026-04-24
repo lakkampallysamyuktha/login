@@ -116,26 +116,33 @@ img {
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
-  /* NAVBAR */
+  /* SHOW ☰ */
   .menu-toggle {
     display: block;
   }
 
+  /* FIX MENU */
   .nav-links {
     position: fixed;
     top: 60px;
     right: 0;
     width: 220px;
     height: calc(100vh - 60px);
+
     background: #0f172a;
+
     flex-direction: column;
     padding: 20px;
-    transition: 0.3s;
+
+    transform: translateX(100%);   /* ✅ HIDE PROPERLY */
+    transition: transform 0.3s ease;
+
     z-index: 999;
   }
 
+  /* SHOW MENU */
   .nav-links.show {
-    right: 0;
+    transform: translateX(0);      /* ✅ SLIDE IN */
   }
 
   /* STACK LAYOUT */
