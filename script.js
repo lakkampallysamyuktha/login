@@ -24,16 +24,17 @@ function signup() {
 // ================= LOGIN =================
 function login() {
 
-  let email = document.getElementById("loginEmail").value.trim();
-  let password = document.getElementById("loginPassword").value.trim();
-   let role = document.getElementById("loginRole").value.trim();
+  let email = document.getElementById("loginEmail").value;
+  let password = document.getElementById("loginPassword").value;
+  let role = document.getElementById("loginRole").value;
 
-   if (!name || !email ) {
-    alert("Fill all fields ❌");
+  // VALIDATION
+  if (email === "" || password === "" || role === "") {
+    alert("Please fill all fields!");
     return;
   }
 
-
+  // GET USER FROM STORAGE
   let storedUser = localStorage.getItem("user_" + email);
 
   if (!storedUser) {
@@ -43,26 +44,31 @@ function login() {
 
   let user = JSON.parse(storedUser);
 
+  // CHECK PASSWORD
   if (user.password !== password) {
     alert("Wrong password ❌");
     return;
   }
 
-  // ✅ SAVE CURRENT USER
+  // CHECK ROLE
+  if (user.role !== role) {
+    alert("Wrong role ❌");
+    return;
+  }
+
+  // SAVE SESSION
   localStorage.setItem("currentUser", JSON.stringify(user));
 
-  // ✅ ROLE ALERT
+  // SUCCESS
   alert(`Welcome ${user.name} 🎉\nRole: ${user.role}`);
 
-  // ✅ REDIRECT
+  // REDIRECT BASED ON ROLE
   if (user.role === "admin") {
     window.location.href = "admin.html";
   } else {
     window.location.href = "dashboard.html";
   }
 }
-
-
 // ================= SHOW USER NAME =================
 window.onload = function () {
 
