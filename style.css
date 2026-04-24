@@ -37,13 +37,11 @@ body {
   position: absolute;
   top: 70px;
   right: 0;
-
   background: #0f172a;
   width: 220px;
 
   display: flex;
   flex-direction: column;
-  gap: 15px;
   padding: 20px;
 
   transform: translateX(100%);
@@ -70,9 +68,10 @@ body {
 
 /* ================= HAMBURGER ================= */
 .menu-toggle {
-  display: block;   /* ✅ visible always */
+  display: block;  /* ✅ show on all devices */
   font-size: 26px;
   cursor: pointer;
+  color: white;
 }
 
 /* ================= MOBILE FIX ================= */
