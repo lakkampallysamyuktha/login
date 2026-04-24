@@ -62,7 +62,6 @@ html, body {
 }
 
 /* ================= MOBILE NAV ================= */
-@media (max-width: 768px) {
 
   @media (max-width: 768px) {
 
@@ -128,7 +127,6 @@ html, body {
     max-width: 250px;
   }
 
-}
 
 /* ================= HERO PREMIUM ================= */
 
@@ -1183,11 +1181,7 @@ button {
 }
 
 /*Login Page  */
-/* ===== GLOBAL ===== */
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-}
+
 
 /* ===== BACKGROUND ===== */
 .auth-page {
@@ -1650,13 +1644,14 @@ body {
 @media (max-width: 768px) {
 
   .contact-cards {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
 
   .contact-section {
     flex-direction: column;
   }
+
+}
 
   .navbar {
     padding: 15px;
