@@ -337,22 +337,41 @@ html, body {
   transform: translateY(-3px);
   box-shadow: 0 10px 20px rgba(37,99,235,0.3);
 }
-
-/* ================= MOBILE ================= */
+/*Mobile section  */
 @media (max-width: 768px) {
 
   .about-container {
-    flex-direction: column; /* ✅ STACK */
-    text-align: center;
+    flex-direction: column;
+    align-items: flex-start;   /* ✅ no center squeeze */
+    gap: 25px;
+  }
+
+  .about-text {
+    width: 100%;
   }
 
   .about-text h2 {
-    font-size: 26px;
+    font-size: 24px;
+  }
+
+  .about-text p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+
+  .about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
   }
 
   .about-btn {
     width: 100%;
-    max-width: 250px;
+    text-align: center;
   }
 
 }
