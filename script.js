@@ -90,15 +90,10 @@ function logout() {
 
 // ================= MENU TOGGLE (FINAL FIX) =================
 document.addEventListener("DOMContentLoaded", () => {
-
-  const menuToggle = document.querySelector("#menu-toggle");
-  const navLinks = document.querySelector("#nav-links");
-
-  console.log("JS Loaded"); // debug
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
 
   menuToggle.addEventListener("click", () => {
-    console.log("Clicked"); // debug
-    navLinks.classList.toggle("show");
+    navLinks.classList.toggle("active"); // ✅ FIXED
   });
-
 });
