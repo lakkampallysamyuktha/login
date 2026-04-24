@@ -62,28 +62,35 @@ html, body {
 /* ================= MOBILE NAV ================= */
 @media (max-width: 768px) {
 
-  /* SHOW ☰ */
   .menu-toggle {
     display: block;
+    font-size: 26px;
+    cursor: pointer;
+    color: white;
   }
 
-  /* HIDE NORMAL MENU */
   .nav-links {
     position: fixed;
-    top: 60px;
-    right: -100%;   /* hidden */
-    width: 220px;
+    top: 70px;   /* FIXED */
+    right: -100%;
+    width: 250px;
     height: 100vh;
     background: #0f172a;
 
+    display: flex;           /* IMPORTANT */
     flex-direction: column;
-    padding: 20px;
-    gap: 15px;
+    padding: 25px;
+    gap: 20px;
 
-    transition: 0.3s;
+    transition: 0.3s ease;
+    z-index: 999;
   }
 
-  /* SHOW MENU WHEN CLICK */
+  .nav-links a {
+    color: white;
+    font-size: 16px;
+  }
+
   .nav-links.show {
     right: 0;
   }
