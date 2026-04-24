@@ -59,6 +59,36 @@ html, body {
   font-size: 24px;
   cursor: pointer;
 }
+/* ================= MOBILE NAV ================= */
+@media (max-width: 768px) {
+
+  /* SHOW ☰ */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* HIDE NORMAL MENU */
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    right: -100%;   /* hidden */
+    width: 220px;
+    height: 100vh;
+    background: #0f172a;
+
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+
+    transition: 0.3s;
+  }
+
+  /* SHOW MENU WHEN CLICK */
+  .nav-links.show {
+    right: 0;
+  }
+
+}
 
 /*  hero*/
   /* HERO FIX */
