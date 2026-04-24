@@ -111,7 +111,7 @@ window.addEventListener("scroll", () => {
   });
 });
 // Services Page
-function toggleFAQ(element) {
-  let p = element.nextElementSibling;
+function toggleFAQ(el) {
+  let p = el.nextElementSibling;
   p.style.display = p.style.display === "block" ? "none" : "block";
 }
