@@ -134,20 +134,16 @@ function toggleFAQ(el) {
 
 
 // Dashborad
-// ===== PROTECT PAGE =====
-(function () {
+document.addEventListener("DOMContentLoaded", function () {
+
+  // ===== PROTECT PAGE =====
   const user = JSON.parse(localStorage.getItem("currentUser"));
 
   if (!user && window.location.pathname.includes("dashboard")) {
     window.location.href = "login.html";
   }
-})();
 
-
-// ===== LOAD USER DATA =====
-window.onload = function () {
-  const user = JSON.parse(localStorage.getItem("currentUser"));
-
+  // ===== LOAD USER DATA =====
   if (user) {
     const nameEl = document.getElementById("userName");
     const roleEl = document.getElementById("userRole");
@@ -155,20 +151,28 @@ window.onload = function () {
     if (nameEl) nameEl.innerText = user.name;
     if (roleEl) roleEl.innerText = user.role;
   }
-};
+
+  // ===== SIDEBAR ACTIVE =====
+  document.querySelectorAll(".sidebar a").forEach(link => {
+    link.addEventListener("click", function () {
+      document.querySelectorAll(".sidebar a").forEach(l => l.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+
+  // ===== MOBILE NAV ACTIVE =====
+  document.querySelectorAll(".nav-item").forEach(item => {
+    item.addEventListener("click", function () {
+      document.querySelectorAll(".nav-item").forEach(i => i.classList.remove("active"));
+      this.classList.add("active");
+    });
+  });
+
+});
 
 
-// ===== LOGOUT =====
+// ===== LOGOUT (keep outside) =====
 function logout() {
   localStorage.removeItem("currentUser");
   window.location.href = "login.html";
 }
-
-
-// ===== SIDEBAR ACTIVE LINK (OPTIONAL PRO) =====
-document.querySelectorAll(".sidebar a").forEach(link => {
-  link.addEventListener("click", function () {
-    document.querySelectorAll(".sidebar a").forEach(l => l.classList.remove("active"));
-    this.classList.add("active");
-  });
-});
