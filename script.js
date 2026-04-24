@@ -87,3 +87,10 @@ function logout() {
   alert("Logged out successfully ✅");
   window.location.href = "index.html";
 }
+// MENU TOGGLE (WORKS ALL DEVICES)
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
