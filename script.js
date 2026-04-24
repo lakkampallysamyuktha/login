@@ -131,3 +131,44 @@ function toggleFAQ(el) {
   // toggle clicked one
   content.style.display = content.style.display === "block" ? "none" : "block";
 }
+
+
+// Dashborad
+// ===== PROTECT PAGE =====
+(function () {
+  const user = JSON.parse(localStorage.getItem("currentUser"));
+
+  if (!user && window.location.pathname.includes("dashboard")) {
+    window.location.href = "login.html";
+  }
+})();
+
+
+// ===== LOAD USER DATA =====
+window.onload = function () {
+  const user = JSON.parse(localStorage.getItem("currentUser"));
+
+  if (user) {
+    const nameEl = document.getElementById("userName");
+    const roleEl = document.getElementById("userRole");
+
+    if (nameEl) nameEl.innerText = user.name;
+    if (roleEl) roleEl.innerText = user.role;
+  }
+};
+
+
+// ===== LOGOUT =====
+function logout() {
+  localStorage.removeItem("currentUser");
+  window.location.href = "login.html";
+}
+
+
+// ===== SIDEBAR ACTIVE LINK (OPTIONAL PRO) =====
+document.querySelectorAll(".sidebar a").forEach(link => {
+  link.addEventListener("click", function () {
+    document.querySelectorAll(".sidebar a").forEach(l => l.classList.remove("active"));
+    this.classList.add("active");
+  });
+});
