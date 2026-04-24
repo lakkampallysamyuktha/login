@@ -1449,18 +1449,51 @@ body {
 .done { background: #bbf7d0; }
 
 /* MOBILE */
+/* ===== MOBILE FIX ===== */
 @media (max-width: 768px) {
+
+  /* SIDEBAR HIDDEN BY DEFAULT */
   .sidebar {
-    position: relative;
-    width: 100%;
-    height: auto;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    width: 220px;
+    height: 100%;
+    z-index: 1000;
+    transition: 0.3s;
   }
 
+  /* SHOW SIDEBAR */
+  .sidebar.active {
+    left: 0;
+  }
+
+  /* CONTENT FULL WIDTH */
   .content {
     margin-left: 0;
+    padding: 15px;
   }
 
-  .cards,
+  /* TOPBAR */
+  .topbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* SEARCH */
+  .search {
+    flex: 1;
+  }
+
+  .search input {
+    width: 100%;
+  }
+
+  /* CARDS STACK */
+  .cards {
+    flex-direction: column;
+  }
+
   .bottom {
     flex-direction: column;
   }
