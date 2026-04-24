@@ -1,15 +1,155 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Admin Panel</title>
+  <title>Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ICONS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  
 </head>
-<body>
 
-  <h1 id="welcomeAdmin">Welcome Admin 🔥</h1>
 
-  <button onclick="logout()">Logout</button>
+<!-- PROTECT -->
+<script>
+  let user = JSON.parse(localStorage.getItem("currentUser"));
+  if (!user) window.location.href = "login.html";
+</script>
 
-  <script src="script.js"></script>
+<div class="main">
 
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h2>STACKLY</h2>
+
+    <a class="active"><i class="fa fa-chart-pie"></i> Dashboard</a>
+    <a><i class="fa fa-folder"></i> Projects</a>
+    <a><i class="fa fa-chart-line"></i> Analytics</a>
+    <a><i class="fa fa-users"></i> Team</a>
+    <a><i class="fa fa-cog"></i> Settings</a>
+
+    <button onclick="logout()">
+      <i class="fa fa-sign-out-alt"></i> Logout
+    </button>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+
+      <div class="search">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="Search projects or members...">
+      </div>
+
+      <div class="profile">
+        <div>
+          <span id="Admin"></span><br>
+          <small id="AdminRole"></small>
+        </div>
+        <img src="https://i.pravatar.cc/40">
+      </div>
+
+    </div>
+
+    <h1>Overview Dashboard</h1>
+
+    <!-- CARDS -->
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon blue"><i class="fa fa-code"></i></div>
+        <h4>Total Projects</h4>
+        <h1>24</h1>
+        <p class="green">↑ 12% from last month</p>
+      </div>
+
+      <div class="card">
+        <div class="icon purple"><i class="fa fa-list"></i></div>
+        <h4>Active Tasks</h4>
+        <h1>145</h1>
+        <p class="red">↓ 5% from last month</p>
+      </div>
+
+      <div class="card">
+        <div class="icon sky"><i class="fa fa-users"></i></div>
+        <h4>Team Members</h4>
+        <h1>48</h1>
+        <p class="green">↑ 2 new this week</p>
+      </div>
+
+    </div>
+
+    <!-- LOWER -->
+    <div class="bottom">
+
+      <!-- ACTIVITY -->
+      <div class="activity">
+        <h3>Recent Activity</h3>
+
+        <div class="item">
+          <i class="fa fa-code"></i>
+          <div>
+            <b>Code merge to main branch</b>
+            <p>10 mins ago</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <i class="fa fa-cloud"></i>
+          <div>
+            <b>AWS Infrastructure scaled up</b>
+            <p>2 hours ago</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <i class="fa fa-check"></i>
+          <div>
+            <b>Deployment successful</b>
+            <p>5 hours ago</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TASKS -->
+      <div class="tasks">
+        <h3>My Tasks</h3>
+
+        <div class="task pending">Update SSL Certificates</div>
+        <div class="task done">Client Demo Setup</div>
+        <div class="task pending">Database Migration</div>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+  <!-- MOBILE NAVBAR -->
+<div class="bottom-nav">
+  <div class="nav-item active">
+    <i class="fa fa-home"></i>
+    <p>Home</p>
+  </div>
+  <div class="nav-item">
+    <i class="fa fa-folder"></i>
+    <p>Projects</p>
+  </div>
+  <div class="nav-item">
+    <i class="fa fa-chart-line"></i>
+    <p>Analytics</p>
+  </div>
+  <div class="nav-item">
+    <i class="fa fa-user"></i>
+    <p>Profile</p>
+  </div>
+</div>
 </body>
 </html>
