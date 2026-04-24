@@ -59,6 +59,7 @@
 }
 
 /* ================= MOBILE ================= */
+/* ================= NAVBAR MOBILE FIX ================= */
 @media (max-width: 768px) {
 
   .menu-toggle {
@@ -66,22 +67,24 @@
   }
 
   .nav-links {
-    position: absolute;
+    position: fixed;
     top: 60px;
-    left: 0;
-    width: 100%;
+    right: -100%;
+    width: 220px;
+    height: calc(100vh - 60px);
 
     background: #0f172a;
 
     flex-direction: column;
-    padding: 15px;
-    gap: 10px;
+    padding: 20px;
+    gap: 15px;
 
-    display: none;   /* hidden */
+    transition: 0.3s;
+    z-index: 999;
   }
 
   .nav-links.show {
-    display: flex;   /* dropdown */
+    right: 0;
   }
 }
 /* ================= HERO ================= */
