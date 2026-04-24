@@ -215,12 +215,51 @@ html, body {
 }
 
 /* ================= BLOG ================= */
-.blog-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+.blog-section {
+  padding: 80px 20px;
 }
 
+.blog-grid {
+  max-width: 1200px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.blog-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.blog-card:hover {
+  transform: translateY(-8px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-content h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.blog-content a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
 /* ================= FOOTER ================= */
 
 .footer {
