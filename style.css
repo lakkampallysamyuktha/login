@@ -424,14 +424,13 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  gap: 30px;
 }
 /* Dashboard section */
 /* ================= DASHBOARD CARDS ================= */
-/* ===== DASHBOARD LAYOUT ===== */
+/* ================= MAIN LAYOUT ================= */
 .main {
   display: flex;
   min-height: 100vh;
-  background: #f5f7fb;
 }
 
-/* ===== SIDEBAR ===== */
+/* ================= SIDEBAR ================= */
 .sidebar {
   width: 240px;
   background: #ffffff;
@@ -443,6 +442,7 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  gap: 30px;
 
   display: flex;
   flex-direction: column;
+  transition: 0.3s;
 }
 
 /* LOGO */
@@ -468,7 +468,6 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  gap: 30px;
 .sidebar a.active {
   background: linear-gradient(90deg,#3b82f6,#2563eb);
   color: white;
-  font-weight: 500;
 }
 
 /* HOVER */
@@ -487,18 +486,25 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  gap: 30px;
   cursor: pointer;
 }
 
-/* ===== CONTENT ===== */
+/* ================= CONTENT ================= */
 .content {
   flex: 1;
   padding: 30px;
 }
 
-/* ===== TOPBAR ===== */
+/* ================= TOPBAR ================= */
 .topbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+}
+
+/* MENU ICON */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
 }
 
 /* SEARCH */
@@ -516,36 +522,32 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  gap: 30px;
   font-weight: 600;
 }
 
-/* ===== TITLE ===== */
+/* TITLE */
 .content h1 {
   font-size: 28px;
   margin-bottom: 25px;
 }
 
-/* ===== CARDS ===== */
+/* ================= DASHBOARD CARDS ================= */
 .dashboard-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
 }
 
-/* CARD */
 .dashboard-card {
   background: #ffffff;
   padding: 25px;
   border-radius: 18px;
 
   box-shadow: 0 8px 25px rgba(0,0,0,0.05);
-
   transition: 0.3s;
 }
 
-/* HOVER */
 .dashboard-card:hover {
   transform: translateY(-6px);
 }
 
-/* TEXT */
 .dashboard-card h3 {
   color: #6b7280;
   font-size: 15px;
@@ -559,50 +561,71 @@ grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  gap: 30px;
 /* COLORS */
 .green {
   color: #10b981;
-  font-weight: 500;
 }
 
 .red {
   color: #ef4444;
-  font-weight: 500;
 }
 
-/* ================= GRID ================= */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
+/* ================= MOBILE VIEW ================= */
+@media (max-width: 768px) {
 
-/* ================= CARD ================= */
-.card {
-  background: white;
-  width: 100%;          /* ✅ FIX */
-  max-width: 100%;      /* ✅ SAFETY */
-  border-radius: 12px;
-  overflow: hidden;
+  /* STACK */
+  .main {
+    flex-direction: column;
+  }
 
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: 0.3s;
-}
-.card:hover {
-  transform: translateY(-8px);
-}
+  /* SHOW MENU */
+  .menu-toggle {
+    display: block;
+  }
 
-/* IMAGE */
-.card img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
+  /* SIDEBAR HIDDEN */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 220px;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+    z-index: 1000;
+  }
 
-/* TEXT */
-.card p {
-  padding: 15px;
-  font-weight: bold;
-}
+  /* SHOW SIDEBAR */
+  .sidebar.show {
+    left: 0;
+  }
 
+  /* CONTENT */
+  .content {
+    padding: 15px;
+  }
+
+  /* TOPBAR */
+  .topbar {
+    gap: 10px;
+  }
+
+  /* SEARCH */
+  .topbar input {
+    width: 100%;
+  }
+
+  /* TITLE */
+  .content h1 {
+    font-size: 22px;
+  }
+
+  /* CARDS STACK */
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-card h1 {
+    font-size: 24px;
+  }
+}
 /* footer */
 /* ================= FOOTER ================= */
 .footer {
