@@ -22,11 +22,36 @@ html, body {
   top: 0;
   z-index: 1000;
 }
-
+/* ===== LOGO CONTAINER ===== */
 .logo {
-  color: #6366f1;
-  font-size: 22px;
-  font-weight: bold;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* ===== LOGO IMAGE ===== */
+.logo img {
+  height: 45px;        /* desktop size */
+  width: auto;
+  max-width: 100%;
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* ===== HOVER EFFECT ===== */
+.logo img:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .logo img {
+    height: 35px;      /* smaller on mobile */
+  }
+
 }
 
 /* MENU */
@@ -1650,19 +1675,7 @@ button {
 }
 
 /*LOGO HEAder part in thnic */
-/* LOGO STYLE */
-.logo img {
-  height: 45px;
-  width: auto;
-  cursor: pointer;
-  transition: 0.3s;
-}
 
-/* HOVER EFFECT */
-.logo img:hover {
-  transform: scale(1.05);
-  opacity: 0.85;
-}
 /* ================= FOOTER PREMIUM ================= */
 
 /* ================= FOOTER ================= */
