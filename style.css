@@ -56,30 +56,32 @@ html, body {
 /* HAMBURGER */
 .menu-toggle {
   display: none;
-  font-size: 24px;
+  font-size: 26px;
   cursor: pointer;
+  color: white;   /* 👈 IMPORTANT FIX */
 }
 
 /* ================= MOBILE NAV ================= */
 @media (max-width: 768px) {
 
+  @media (max-width: 768px) {
+
   .menu-toggle {
     display: block;
-    font-size: 26px;
-    cursor: pointer;
-     color: white;
+    color: white; /* 👈 make visible */
   }
+
   .nav-links {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  background: #0f172a;
-  padding: 20px;
-  text-align: center;
-  gap: 15px;
+    display: none;
+    flex-direction: column;
+    background: #0f172a; /* same as navbar */
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+  }
+
+ 
 }
 
 .nav-links.active {
@@ -88,7 +90,7 @@ html, body {
 
   .nav-links a {
     color: white;
-    font-size: 16px;
+    margin: 10px 0;
   }
 
   .nav-links.show {
