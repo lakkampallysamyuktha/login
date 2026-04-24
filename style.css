@@ -12,14 +12,19 @@ body {
   background: #f9fafb;
   color: #111827;
 }
-
-/* NAVBAR */
+/* ================= NAVBAR ================= */
 .navbar {
-  position: sticky;   /* stays on top while scrolling */
+  position: sticky;
   top: 0;
   z-index: 1000;
 
-  background: rgba(15, 23, 42, 0.9); /* solid enough */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 20px;
+
+  background: rgba(15, 23, 42, 0.9);
   backdrop-filter: blur(10px);
 }
 
@@ -27,12 +32,30 @@ body {
   color: #6366f1;
 }
 
-/* MENU */
+/* ================= MENU ================= */
 .nav-links {
+  position: absolute;
+  top: 70px;
+  right: 0;
+
+  background: #0f172a;
+  width: 220px;
+
   display: flex;
-  gap: 30px;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+
+  transform: translateX(100%);
+  transition: 0.3s;
 }
 
+/* SHOW MENU */
+.nav-links.show {
+  transform: translateX(0);
+}
+
+/* LINKS */
 .nav-links a {
   color: white;
   text-decoration: none;
@@ -43,13 +66,11 @@ body {
   background: #6366f1;
   padding: 8px 16px;
   border-radius: 6px;
-  color: white;
-  text-decoration: none;
 }
 
-/* HAMBURGER */
+/* ================= HAMBURGER ================= */
 .menu-toggle {
-  display: none;
+  display: block;   /* ✅ visible always */
   font-size: 26px;
   cursor: pointer;
 }
