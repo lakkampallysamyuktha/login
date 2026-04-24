@@ -48,7 +48,7 @@ html, body {
   display: none;
   font-size: 24px;
   cursor: pointer;
-   color: #0f172a;
+   color: white;
 }
 /* ================= MOBILE NAV ================= */
 @media (max-width: 768px) {
