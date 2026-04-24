@@ -88,9 +88,12 @@ function logout() {
   window.location.href = "index.html";
 }
 // MENU TOGGLE (WORKS ALL DEVICES)
+// ================= MENU TOGGLE (SAFE) =================
 const menuToggle = document.getElementById("menu-toggle");
 const navLinks = document.getElementById("nav-links");
 
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("show");
+  });
+}
