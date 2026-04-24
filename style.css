@@ -947,16 +947,26 @@ html, body {
 }
 
 /* ===== HERO ===== */
-/* ===== ABOUT HERO (EXACT MATCH) ===== */
+/* ===== PREMIUM HERO ===== */
 .about-hero {
-  background: #eef1f5;   /* same light grey */
+  height: 420px;   /* 🔥 fixed height like reference */
+  background: linear-gradient(to bottom, #f8fafc, #eef2f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 140px 20px 100px;
+  padding: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* CONTAINER */
+.hero-content {
+  max-width: 750px;
 }
 
 /* TITLE */
 .about-hero h1 {
-  font-size: 56px;
+  font-size: 64px;
   font-weight: 700;
   color: #1f2937;
   margin-bottom: 20px;
@@ -966,11 +976,8 @@ html, body {
 .about-hero p {
   font-size: 18px;
   color: #6b7280;
-  max-width: 700px;
-  margin: auto;
-  line-height: 1.6;
+  line-height: 1.7;
 }
-
 /* ===== CONTENT ===== */
 .about-wrapper {
   max-width: 1200px;
@@ -1027,15 +1034,13 @@ html, body {
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
-
-@media (max-width: 768px) {
-
   .about-hero {
-    padding: 90px 20px 60px;
+    height: auto;
+    padding: 80px 20px;
   }
 
   .about-hero h1 {
-    font-size: 32px;
+    font-size: 34px;
   }
 
   .about-hero p {
