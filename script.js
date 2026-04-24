@@ -4,7 +4,7 @@ function signup() {
   let name = document.getElementById("signupName").value.trim();
   let email = document.getElementById("signupEmail").value.trim();
   let password = document.getElementById("signupPassword").value.trim();
-  let role = document.getElementById("signupRole").value;
+  let role = document.getElementById("signupRole").value.trim();
 
   if (!name || !email || !password || !role) {
     alert("Fill all fields ❌");
@@ -26,11 +26,13 @@ function login() {
 
   let email = document.getElementById("loginEmail").value.trim();
   let password = document.getElementById("loginPassword").value.trim();
+   let role = document.getElementById("loginRole").value.trim();
 
-  if (!email || !password) {
+   if (!name || !email || !password || !role) {
     alert("Fill all fields ❌");
     return;
   }
+
 
   let storedUser = localStorage.getItem("user_" + email);
 
