@@ -1091,78 +1091,156 @@ html, body {
 }
 /*Service Page  */
 
-/* ===== SERVICES SECTION ONLY ===== */
-
-.services-section {
+/* ===== SERVICE SECTION ===== */
+.service-section {
   padding: 80px 20px;
-  text-align: center;
   background: #f8fafc;
 }
 
-.services-section .section-title {
-  font-size: 32px;
-  margin-bottom: 40px;
-  color: #0f172a;
+.service-section .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
 }
 
-/* GRID */
-.services-section .services-grid {
+.service-section.reverse .container {
+  flex-direction: row-reverse;
+}
+
+.service-section .image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.service-section .content h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.service-section .content p {
+  color: #475569;
+  margin-bottom: 15px;
+}
+
+.service-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.service-section ul li {
+  margin-bottom: 8px;
+}
+
+.service-section button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 2px solid #2563eb;
+  background: transparent;
+  color: #2563eb;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.service-section button:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* ===== PRICING ===== */
+.pricing {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.pricing-cards {
   display: flex;
   justify-content: center;
   gap: 25px;
   flex-wrap: wrap;
 }
 
-/* CARD */
-.services-section .card {
-  background: #ffffff;
+.price-card {
+  background: white;
   padding: 25px;
-  width: 300px;
+  width: 280px;
   border-radius: 12px;
-  transition: 0.3s;
   box-shadow: 0 5px 20px rgba(0,0,0,0.05);
 }
 
-.services-section .card:hover {
-  transform: translateY(-8px);
+.price-card h1 {
+  color: #2563eb;
 }
 
-/* ACTIVE CARD */
-.services-section .card.active {
+.price-card span {
+  font-size: 14px;
+}
+
+.price-card button {
+  margin-top: 10px;
+  padding: 10px;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+}
+
+.price-card.popular {
   border: 2px solid #2563eb;
 }
 
-/* ICON */
-.services-section .service-icon {
-  font-size: 32px;
-  color: #2563eb;
-  margin-bottom: 15px;
+/* ===== TECH ===== */
+.tech {
+  padding: 80px 20px;
+  text-align: center;
 }
 
-/* TEXT */
-.services-section .card h3 {
-  margin-bottom: 10px;
-  color: #0f172a;
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
 }
 
-.services-section .card p {
-  color: #475569;
-  margin-bottom: 15px;
+.tech-grid div {
+  background: #e2e8f0;
+  padding: 15px 25px;
+  border-radius: 10px;
 }
 
-/* READ MORE */
-.services-section .read-more {
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 500;
+/* ===== FAQ ===== */
+.faq {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: auto;
 }
 
-/* MOBILE */
+.faq-item h3 {
+  background: #f1f5f9;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.faq-item p {
+  display: none;
+  padding: 10px;
+}
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  .services-section .services-grid {
+
+  .service-section .container {
     flex-direction: column;
-    align-items: center;
   }
+
+  .service-section .image img {
+    height: 220px;
+  }
+
 }
 /* ================= FOOTER PREMIUM ================= */
 
