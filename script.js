@@ -97,3 +97,15 @@ document.addEventListener("DOMContentLoaded", () => {
     navLinks.classList.toggle("active"); // ✅ FIXED
   });
 });
+
+//About page
+const elements = document.querySelectorAll(".about-container, .stat-box");
+
+window.addEventListener("scroll", () => {
+  elements.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if (top < window.innerHeight - 100) {
+      el.classList.add("show");
+    }
+  });
+});
