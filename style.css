@@ -88,12 +88,36 @@ html, body {
 }
 
 /* ================= ABOUT ================= */
-.about-container {
+}.about-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  max-width: 1100px;
+  margin: auto;
   padding: 80px 20px;
+  align-items: center;
 }
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.about-list {
+  margin-top: 20px;
+  list-style: none;
+}
+
+.about-list li {
+  margin-bottom: 10px;
+}
+
+.about-btn {
+  display: block;
+  text-align: center;
+  margin: 20px auto;
+}
+
 
 /* ================= SERVICES ================= */
 .services-grid {
@@ -127,10 +151,123 @@ html, body {
 }
 
 /* ================= FOOTER ================= */
+
+.footer {
+  background: linear-gradient(135deg, #0a1224, #0f1b36);
+  color: #cbd5e1;
+  position: relative;
+}
 .footer-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
+}
+
+
+/* LOGO */
+.footer .logo {
+  color: #38bdf8;
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+/* LEFT TEXT */
+.footer-box p {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+/* HEADINGS */
+.footer-box h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 18px;
+  position: relative;
+}
+
+/* SMALL BLUE LINE */
+.footer-box h3::after {
+  content: "";
+  width: 35px;
+  height: 2px;
+  background: #3b82f6;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+}
+
+/* LINKS */
+.footer-box a {
+  display: block;
+  color: #94a3b8;
+  text-decoration: none;
+  margin: 8px 0;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-box a:hover {
+  color: #38bdf8;
+  padding-left: 5px;
+}
+
+/* SERVICES TEXT */
+.footer-box p {
+  margin: 8px 0;
+}
+
+/* CONTACT ICON STYLE */
+.footer-box p span {
+  margin-right: 8px;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+
+  background: #1e293b;
+  color: #cbd5e1;
+
+  margin-right: 10px;
+  font-size: 16px;
+
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #3b82f6;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* BOTTOM */
+.footer-bottom {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #1e293b;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+
+.blog-card,
+.card,
+.contact-box {
+  width: 100%;
+}
+
+  }
 }
 
 /* ================= IMAGE FIX ================= */
