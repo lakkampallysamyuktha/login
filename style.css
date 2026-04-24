@@ -91,16 +91,38 @@ html, body {
 
 }
 
-/* ================= HERO FIX ================= */
+/* ================= HERO PREMIUM ================= */
+
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 40px;
-  padding: 80px 40px;
+  gap: 50px;
+  padding: 100px 40px;
+  position: relative;
+  overflow: hidden;
 }
 
-/* LEFT TEXT */
+/* SOFT BACKGROUND GLOW */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: #2563eb;
+  filter: blur(120px);
+  opacity: 0.2;
+  top: -100px;
+  left: -100px;
+  z-index: 0;
+}
+
+/* TEXT */
+.hero-left {
+  z-index: 1;
+  animation: fadeSlideLeft 1s ease forwards;
+}
+
 .hero-left h1 {
   font-size: 48px;
   line-height: 1.2;
@@ -113,7 +135,6 @@ html, body {
 .hero-left p {
   margin: 20px 0;
   color: #64748b;
-  font-size: 16px;
 }
 
 /* BUTTONS */
@@ -127,7 +148,12 @@ html, body {
   color: white;
   padding: 12px 24px;
   border-radius: 8px;
-  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(37,99,235,0.4);
 }
 
 .btn-outline {
@@ -135,16 +161,62 @@ html, body {
   color: #2563eb;
   padding: 12px 24px;
   border-radius: 8px;
-  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-outline:hover {
+  background: #2563eb;
+  color: white;
 }
 
 /* IMAGE */
+.hero-right {
+  z-index: 1;
+  animation: fadeSlideRight 1s ease forwards;
+}
+
 .hero-right img {
   width: 100%;
   border-radius: 20px;
+  animation: floatImage 4s ease-in-out infinite;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* ================= ANIMATIONS ================= */
+
+/* TEXT LEFT */
+@keyframes fadeSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* IMAGE RIGHT */
+@keyframes fadeSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* FLOATING IMAGE */
+@keyframes floatImage {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
 }
 
 /* ================= MOBILE ================= */
+
 @media (max-width: 768px) {
 
   .hero {
