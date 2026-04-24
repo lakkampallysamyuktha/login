@@ -162,7 +162,7 @@ img {
 /* ================= HERO ================= */
 .hero {
   height: 90vh;
-  background: url('Hero.webp') center/cover;
+  background: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fm=webp&q=55&w=1100") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
