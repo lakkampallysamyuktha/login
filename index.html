@@ -82,22 +82,39 @@
         passionate about innovation and technology.
       </p>
 
-    <ul class="about-list">
-  <li>Proven Track Record of Success</li>
-  <li>Highly Skilled Certified Experts</li>
-  <li>24/7 Premium Support</li>
-</ul>
+      <ul class="about-list">
+        <li>✔ Proven Track Record of Success</li>
+        <li>✔ Highly Skilled Certified Experts</li>
+        <li>✔ 24/7 Premium Support</li>
+      </ul>
+
+      <!-- BUTTON (INSIDE TEXT for better alignment) -->
+      <a href="about.html" class="about-btn">More About Us →</a>
     </div>
 
     <!-- RIGHT IMAGE -->
-    <div class="about-image">
-      <img src="https://images.unsplash.com/photo-1551434678-e076c223a692" alt="team">
-    </div>
+  <div class="about-image">
 
-  </div>
+  <picture>
+    <!-- WEBP (modern browsers) -->
+    <source 
+      srcset="https://images.unsplash.com/photo-1551434678-e076c223a692?q=75&w=800&fm=webp"
+      type="image/webp"
+    >
+
+    <!-- fallback -->
+    <img 
+      src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800&auto=format&fit=crop"
+      alt="Team working in IT environment"
+      loading="lazy"
+      width="600"
+      height="400"
+    >
+  </picture>
+
+</div>
 
 </section>
-<a href="about.html" class="btn about-btn">More About Us →</a>
 
 <!-- ================= SERVICES ================= -->
 <section class="services-section">
