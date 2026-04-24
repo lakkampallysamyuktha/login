@@ -15,41 +15,41 @@ html, body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: 10px 25px;
   background: #0f172a;
   color: white;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
-/* ===== LOGO CONTAINER ===== */
+
+/* ===== LOGO ===== */
 .logo {
   display: flex;
   align-items: center;
-  text-decoration: none;
 }
 
-/* ===== LOGO IMAGE ===== */
 .logo img {
-  height: 45px;        /* desktop size */
+  height: 42px;     /* slightly smaller */
   width: auto;
-  max-width: 100%;
   display: block;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
-/* ===== HOVER EFFECT ===== */
+/* Hover */
 .logo img:hover {
   transform: scale(1.05);
   opacity: 0.85;
 }
-
-/* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
 
+  .navbar {
+    padding: 8px 15px;   /* tighter */
+  }
+
   .logo img {
-    height: 35px;      /* smaller on mobile */
+    height: 32px;        /* clearly smaller */
   }
 
 }
