@@ -87,13 +87,17 @@ function logout() {
   alert("Logged out successfully ✅");
   window.location.href = "index.html";
 }
-// MENU TOGGLE (WORKS ALL DEVICES)
-// ================= MENU TOGGLE (SAFE) =================
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
 
-if (menuToggle && navLinks) {
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
-}
+// ================= MENU TOGGLE (FINAL FIX) =================
+document.addEventListener("DOMContentLoaded", function () {
+
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  }
+
+});
