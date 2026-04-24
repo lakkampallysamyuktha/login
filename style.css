@@ -947,22 +947,28 @@ html, body {
 }
 
 /* ===== HERO ===== */
+/* ===== ABOUT HERO (EXACT MATCH) ===== */
 .about-hero {
+  background: #eef1f5;   /* same light grey */
   text-align: center;
-  padding: 120px 20px 80px;
+  padding: 140px 20px 100px;
 }
 
+/* TITLE */
 .about-hero h1 {
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 700;
   color: #1f2937;
+  margin-bottom: 20px;
 }
 
+/* SUBTEXT */
 .about-hero p {
-  max-width: 650px;
-  margin: 15px auto;
   font-size: 18px;
   color: #6b7280;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
 }
 
 /* ===== CONTENT ===== */
@@ -1022,14 +1028,21 @@ html, body {
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
+@media (max-width: 768px) {
+
   .about-hero {
-    padding: 80px 20px 40px;
+    padding: 90px 20px 60px;
   }
 
   .about-hero h1 {
-    font-size: 30px;
+    font-size: 32px;
   }
 
+  .about-hero p {
+    font-size: 14px;
+  }
+
+}
   .about-wrapper {
     grid-template-columns: 1fr;
     gap: 30px;
