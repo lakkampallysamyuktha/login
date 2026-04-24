@@ -16,8 +16,8 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
-  background: #0f172a;
-  color: white;
+  background: #ffffff;   /* white background */
+  color: #0f172a;        /* dark text */
   position: sticky;
   top: 0;
   z-index: 1000;
