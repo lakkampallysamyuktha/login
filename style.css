@@ -66,27 +66,31 @@
     display: block;
   }
 
-  /* HIDE NORMAL MENU */
+  /* FIX MENU */
   .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: #0f172a;
+    position: fixed;          /* ✅ IMPORTANT */
+    top: 60px;
+    right: -100%;             /* start hidden */
     width: 220px;
+    height: 100vh;
+
+    background: #0f172a;
 
     flex-direction: column;
     padding: 20px;
     gap: 15px;
 
-    transform: translateX(100%);
-    transition: 0.3s;
+    transition: 0.3s ease;
+    z-index: 999;             /* ✅ VERY IMPORTANT */
   }
 
-  /* SHOW MENU WHEN CLICK */
+  /* SHOW MENU */
   .nav-links.show {
-    transform: translateX(0);
+    right: 0;                 /* slide in */
   }
 }
+
+
 /* ================= HERO ================= */
 .hero {
   height: 90vh;
