@@ -99,12 +99,13 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //About page
-const elements = document.querySelectorAll(".about-container, .stat-box");
+
+const items = document.querySelectorAll(".reveal");
 
 window.addEventListener("scroll", () => {
-  elements.forEach(el => {
+  items.forEach(el => {
     const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
+    if (top < window.innerHeight - 80) {
       el.classList.add("show");
     }
   });
