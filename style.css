@@ -61,8 +61,8 @@ html, body {
 }
 
 .nav-links a {
-  color: #cbd5e1;
-  text-decoration: none;
+  color: #111;   /* ✅ dark visible */
+  font-weight: 500;
 }
 
 .nav-links a:hover {
