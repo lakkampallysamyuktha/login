@@ -1,24 +1,4 @@
 
-  // ================= FAQ =================
-  const faqs = document.querySelectorAll(".faq-item");
-
-  faqs.forEach(item => {
-    const question = item.querySelector(".faq-question");
-
-    if (question) {
-      question.addEventListener("click", () => {
-
-        faqs.forEach(i => {
-          if (i !== item) i.classList.remove("active");
-        });
-
-        item.classList.toggle("active");
-      });
-    }
-  });
-
-
-
 // ================= SIGNUP =================
 function signup() {
 
