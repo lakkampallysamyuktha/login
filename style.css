@@ -12,7 +12,11 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding-top: 70px; /* match navbar height */
+}
+
+/* 👇 ADD THIS BELOW */
+body:not(.auth-page-body) {
+  padding-top: 70px;
 }
 
 /* ================= NAVBAR ================= */
@@ -1134,7 +1138,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #0f172a, #1e3a8a);
 }
 
 /* ===== CARD ===== */
