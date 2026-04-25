@@ -1557,61 +1557,54 @@ button {
 
 /* ===== WHAT WE DO SECTION ===== */
 .what-we-do {
+  padding: 100px 20px;
   text-align: center;
-  padding: 80px 20px;
-  background: #ffffff;
+  background: linear-gradient(to bottom, #f8fafc, #eef2ff);
 }
 
-/* small label */
-.what-we-do .small {
-  color: #6b7280;
+/* SMALL TAG */
+.what-we-do .tag {
+  color: #2563eb;
+  font-weight: 600;
   font-size: 14px;
   margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
-/* main heading */
+/* MAIN HEADING */
 .what-we-do h2 {
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 700;
   color: #1f2937;
   margin-bottom: 20px;
 }
 
-/* description */
-.what-we-do p {
-  max-width: 750px;
+/* DESCRIPTION */
+.what-we-do .desc {
+  max-width: 700px;
   margin: auto;
   font-size: 16px;
-  color: #6b7280;
+  color: #4b5563;
   line-height: 1.7;
 }
+
 @media (max-width: 768px) {
 
-  .services-hero {
-    padding: 60px 15px;
-  }
-
-  .services-hero h1 {
-    font-size: 28px;
-  }
-
-  .services-hero p {
-    font-size: 14px;
-  }
-
   .what-we-do {
-    padding: 60px 15px;
+    padding: 70px 15px;
   }
 
   .what-we-do h2 {
-    font-size: 24px;
+    font-size: 26px;
   }
 
-  .what-we-do p {
+  .what-we-do .desc {
     font-size: 14px;
   }
 
 }
+
+
 /* ===== SERVICE SECTION ===== */
 .service {
   padding: 80px 20px;
@@ -1655,18 +1648,31 @@ button {
 }
 
 /* LIST */
+/* ===== LIST FIX ===== */
 .service-text ul {
   list-style: none;
   padding: 0;
   margin-bottom: 25px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+  gap: 12px;
 }
 
 .service-text li {
+  position: relative;
+  padding-left: 22px;
   font-size: 14px;
   color: #374151;
+}
+
+/* CUSTOM ICON */
+.service-text li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #2563eb;
+  font-size: 13px;
 }
 
 /* BUTTON */
@@ -1733,14 +1739,22 @@ button {
     font-size: 14px;
   }
 
+ 
   .service-text ul {
-    grid-template-columns: 1fr; /* single column */
-    text-align: left;
+    grid-template-columns: 1fr;  /* single column */
+    gap: 10px;
   }
 
-  .service-image img {
-    border-radius: 12px;
+  .service-text li {
+    padding-left: 20px;
+    font-size: 14px;
   }
+
+  .service-text li::before {
+    font-size: 12px;
+  }
+
+}
 
 }
 
