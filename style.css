@@ -87,39 +87,38 @@ html, body {
 }
 
 /* ================= MOBILE NAV ================= */
-
-  @media (max-width: 768px) {
+/* ================= MOBILE NAV FIX ================= */
+@media (max-width: 768px) {
 
   .menu-toggle {
-    display: block;
-    color: white; /* 👈 make visible */
+    display: block;      /* ✅ show icon */
+    color: black;        /* ✅ black icon */
+    font-size: 26px;
+    cursor: pointer;
   }
 
   .nav-links {
     display: none;
-    flex-direction: column;
-    background: #0f172a; /* same as navbar */
     position: absolute;
-    top: 60px;
+    top: 70px;
     right: 20px;
+    width: 220px;
+    background: #0f172a;   /* ✅ black dropdown */
+    flex-direction: column;
     padding: 20px;
+    border-radius: 10px;
   }
 
- 
-}
-
-.nav-links.active {
-  display: flex;
-}
+  .nav-links.active {
+    display: flex;   /* 🔥 important */
+  }
 
   .nav-links a {
-    color: white;
-    margin: 10px 0;
+    color: white;   /* visible text */
+    padding: 10px 0;
   }
 
-  .nav-links.show {
-    right: 0;
-  }
+}
 
 
 /*  hero*/
