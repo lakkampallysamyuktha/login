@@ -111,12 +111,12 @@ body:not(.auth-page-body) {
     font-size: 26px;
   }
 
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 70px;
-    left: 0;                 /* ✅ FULL WIDTH */
-    width: 100%;
+ .nav-links {
+  display: flex;
+  gap: 25px;
+  margin-left: auto;   /* 👈 THIS FIXES ALIGNMENT */
+  align-items: center;
+}
 
     background: #ffffff;     /* ✅ FIXED */
     flex-direction: column;
