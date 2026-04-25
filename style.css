@@ -1514,6 +1514,7 @@ html, body {
 
 
 /* ===== SERVICE SECTION ===== */
+/* ===== SERVICE SECTION ===== */
 .service {
   padding: 80px 20px;
   background: #f8fafc;
@@ -1523,6 +1524,7 @@ html, body {
   background: #ffffff;
 }
 
+/* CONTAINER */
 .service-container {
   max-width: 1100px;
   margin: auto;
@@ -1531,12 +1533,12 @@ html, body {
   gap: 60px;
 }
 
-/* REVERSE LAYOUT */
+/* REVERSE (for alternating layout) */
 .service.reverse .service-container {
   flex-direction: row-reverse;
 }
 
-/* TEXT */
+/* ===== TEXT ===== */
 .service-text {
   flex: 1;
 }
@@ -1555,8 +1557,7 @@ html, body {
   margin-bottom: 20px;
 }
 
-/* LIST */
-/* ===== LIST FIX ===== */
+/* ===== LIST (FIXED CLEAN BULLETS) ===== */
 .service-text ul {
   list-style: none;
   padding: 0;
@@ -1566,24 +1567,23 @@ html, body {
   gap: 12px;
 }
 
-.service-text li {
+.service-text ul li {
   position: relative;
   padding-left: 22px;
   font-size: 14px;
   color: #374151;
 }
 
-/* CUSTOM ICON */
-.service-text li::before {
+/* ICON */
+.service-text ul li::before {
   content: "✔";
   position: absolute;
   left: 0;
-  top: 0;
   color: #2563eb;
   font-size: 13px;
 }
 
-/* BUTTON */
+/* ===== BUTTON ===== */
 .btn-outline {
   display: inline-block;
   padding: 10px 18px;
@@ -1600,7 +1600,7 @@ html, body {
   color: #fff;
 }
 
-/* IMAGE */
+/* ===== IMAGE ===== */
 .service-image {
   flex: 1;
 }
@@ -1612,22 +1612,9 @@ html, body {
   transition: 0.3s;
 }
 
-/* HOVER EFFECT */
 .service-image img:hover {
   transform: scale(1.03);
 }
-/* ===== SCROLL ANIMATION ===== */
-.service {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.6s ease;
-}
-
-.service.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-/* ===== MOBILE FIX ===== */
 @media (max-width: 768px) {
 
   .service-container {
@@ -1648,32 +1635,17 @@ html, body {
     font-size: 14px;
   }
 
-  /* 🔥 IMPORTANT FIX (REMOVE DOTS) */
+  /* SINGLE COLUMN LIST */
   .service-text ul {
-    list-style: none !important;     /* remove bullets */
-    padding-left: 0 !important;      /* remove spacing */
     grid-template-columns: 1fr;
-    gap: 10px;
+    text-align: left;
   }
 
   .service-text ul li {
-    list-style: none !important;
     padding-left: 20px;
-    font-size: 14px;
-    position: relative;
-  }
-
-  /* CUSTOM ICON */
-  .service-text ul li::before {
-    content: "✔";
-    position: absolute;
-    left: 0;
-    color: #2563eb;
-    font-size: 12px;
   }
 
 }
-
 
 //* PROCESS (cards like screenshot) */
 .process {
