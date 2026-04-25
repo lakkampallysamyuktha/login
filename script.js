@@ -177,9 +177,23 @@ function logout() {
   window.location.href = "login.html";
 }
 // services page
-function toggleFAQ(el) {
-  const p = el.nextElementSibling;
-  p.style.display = p.style.display === "block" ? "none" : "block";
-}
+ const faqs = document.querySelectorAll(".faq-item");
 
+  faqs.forEach(item => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+
+      // close all
+      faqs.forEach(i => {
+        if (i !== item) i.classList.remove("active");
+      });
+
+      // toggle current
+      item.classList.toggle("active");
+
+    });
+  });
+
+});
 
