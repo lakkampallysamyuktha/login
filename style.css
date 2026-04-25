@@ -76,10 +76,7 @@ body:not(.auth-page-body) {
 }
 
 /* MENU */
-.nav-links {
-  display: flex;
-  gap: 25px;
-}
+
 
 .nav-links a {
   color: #111 !important;   /* 🔥 FORCE DARK COLOR */
