@@ -113,24 +113,20 @@ body:not(.auth-page-body) {
 
   .menu-toggle {
     display: block;
-    color: #111;
     font-size: 26px;
+    color: #111;
   }
 
- .nav-links {
-  display: flex;
-  gap: 25px;
-  margin-left: auto;   /* 👈 THIS FIXES ALIGNMENT */
-  align-items: center;
-}
-
-    background: #ffffff;     /* ✅ FIXED */
+  .nav-links {
+    display: none;
     flex-direction: column;
-    padding: 20px 0;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
     text-align: center;
-
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    z-index: 999;
+    padding: 20px 0;
   }
 
   .nav-links.active {
@@ -138,14 +134,10 @@ body:not(.auth-page-body) {
   }
 
   .nav-links a {
-    color: #111 !important;
     padding: 12px;
     display: block;
   }
-  
-
 }
-
 /*  hero*/
 /* HERO FIX */
 .hero {
