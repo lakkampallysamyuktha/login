@@ -1607,19 +1607,16 @@ html, body {
 /* ===== IMAGE ===== */
 .service-image {
   flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-/* PREMIUM IMAGE STYLE */
 .service-image img {
-  width: 100%;
-  border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-  transition: transform 0.4s ease;
-}
-
-/* HOVER EFFECT */
-.service-image img:hover {
-  transform: scale(1.05);
+  width: 280px;        /* 👈 control size */
+  height: 280px;       /* 👈 perfect square */
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* ===== MOBILE ===== */
@@ -1662,13 +1659,14 @@ html, body {
     font-size: 12px;
   }
 
-  /* IMAGE SIZE FIX */
   .service-image img {
-    max-height: 220px;
-    object-fit: cover;
-    border-radius: 14px;
+    width: 200px;
+    height: 200px;
   }
+
 }
+
+  
 
 
 //* PROCESS (cards like screenshot) */
