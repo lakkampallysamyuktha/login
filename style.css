@@ -1535,10 +1535,9 @@ button:hover {
 
 /* CONTAINER */
 .faq-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
 }
-
 /* ITEM */
 .faq-item {
   background: #e5e7eb;
@@ -1566,10 +1565,11 @@ button:hover {
 .faq-answer {
   max-height: 0;
   overflow: hidden;
-  text-align: left;
-  padding: 0 18px;
-  color: #555;
-  transition: all 0.4s ease;
+  transition: max-height 0.4s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 1000px; /* safe for all content */
 }
 
 /* ACTIVE */
@@ -1581,6 +1581,9 @@ button:hover {
 .faq-item.active .arrow {
   transform: rotate(180deg);
 }
+.faq-item:hover {
+  background: #dbeafe;
+}
 /* MOBILE */
 @media (max-width: 768px) {
 
@@ -1589,12 +1592,23 @@ button:hover {
     text-align: center;
   }
 
-  .process-grid,
-  .pricing-cards,
-  .tech-grid {
-    grid-template-columns: 1fr;
+  /* ✅ keep FAQ text LEFT for readability */
+  .faq-answer {
+    text-align: left;
+    font-size: 14px;
   }
 
+  .faq-section {
+    padding: 60px 20px;
+  }
+
+ .faq-question {
+  padding: 16px;
+}
+
+}
+.faq-item {
+  margin-bottom: 12px;
 }
 /*Login Page  */
 
