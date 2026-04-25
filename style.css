@@ -1546,18 +1546,19 @@ html, body {
 }
 
 /* ===== SMALL SQUARE IMAGE ===== */
+
 .image-card img {
-  width: 160px;
-  height: 160px;
+  width: 180px;   /* 👈 increased size */
+  height: 180px;
   object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  transition: 0.3s;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
 }
 
-/* HOVER */
+/* hover effect (optional but nice) */
 .image-card img:hover {
-  transform: scale(1.08);
+  transform: scale(1.05);
 }
 
 /* ===== TEXT ===== */
