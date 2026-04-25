@@ -80,6 +80,13 @@ html, body {
 
 @media (max-width: 768px) {
 
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    color: #111827;   /* black icon */
+    cursor: pointer;
+  }
+
   .nav-links {
     display: none;
     flex-direction: column;
@@ -96,18 +103,16 @@ html, body {
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   }
 
+  /* ✅ ONLY USE THIS */
   .nav-links.active {
-    display: flex;   /* ✅ matches your JS */
+    display: flex;
   }
-}
+
   .nav-links a {
-    color: #111827;     /* dark text */
+    color: #111827;
     padding: 10px 0;
   }
 
-  .nav-links.show {
-    display: flex;
-  }
 }
 
 
