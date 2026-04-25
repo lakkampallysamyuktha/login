@@ -99,13 +99,16 @@ function logout() {
 
 // ================= MENU TOGGLE (FINAL FIX) =================
 document.addEventListener("DOMContentLoaded", () => {
+
+  // ===== MENU TOGGLE =====
   const menuToggle = document.getElementById("menu-toggle");
   const navLinks = document.getElementById("nav-links");
 
-  menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active"); // ✅ FIXED
-  });
-});
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
 
 //About page
 
@@ -119,21 +122,6 @@ window.addEventListener("scroll", () => {
     }
   });
 });
-// Services Page
-// ===== FAQ TOGGLE =====
-function toggleFAQ(el) {
-  const content = el.nextElementSibling;
-
-  // close all other FAQs
-  document.querySelectorAll(".faq-item p").forEach(p => {
-    if (p !== content) p.style.display = "none";
-  });
-
-  // toggle clicked one
-  content.style.display = content.style.display === "block" ? "none" : "block";
-}
-
-
 // Dashborad
 document.addEventListener("DOMContentLoaded", function () {
 
