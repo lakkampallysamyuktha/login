@@ -1,3 +1,24 @@
+
+  // ================= FAQ =================
+  const faqs = document.querySelectorAll(".faq-item");
+
+  faqs.forEach(item => {
+    const question = item.querySelector(".faq-question");
+
+    if (question) {
+      question.addEventListener("click", () => {
+
+        faqs.forEach(i => {
+          if (i !== item) i.classList.remove("active");
+        });
+
+        item.classList.toggle("active");
+      });
+    }
+  });
+
+
+
 // ================= SIGNUP =================
 function signup() {
 
@@ -177,35 +198,3 @@ function logout() {
   window.location.href = "login.html";
 }
 // services page
-// ================= MENU TOGGLE =================
-document.addEventListener("DOMContentLoaded", () => {
-
-  // ================= MENU TOGGLE =================
-  const menuToggle = document.getElementById("menu-toggle");
-  const navLinks = document.getElementById("nav-links");
-
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  }
-
-  // ================= FAQ =================
-  const faqs = document.querySelectorAll(".faq-item");
-
-  faqs.forEach(item => {
-    const question = item.querySelector(".faq-question");
-
-    if (question) {
-      question.addEventListener("click", () => {
-
-        faqs.forEach(i => {
-          if (i !== item) i.classList.remove("active");
-        });
-
-        item.classList.toggle("active");
-      });
-    }
-  });
-
-});
