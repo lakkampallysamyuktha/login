@@ -1750,7 +1750,165 @@ button {
   }
 
 }
- 
+/*Services Page  */
+/* ===== PARALLAX HERO ===== */
+.services-hero {
+  height: 400px;
+  background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1600');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* 🔥 parallax */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+}
+
+/* overlay for readability */
+.services-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.services-hero h1,
+.services-hero p {
+  position: relative;
+  z-index: 2;
+}
+/* ===== GLASS EFFECT ===== */
+.image-card {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.content {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 20px;
+}
+/* ===== SERVICE HOVER ===== */
+.container {
+  transition: all 0.4s ease;
+}
+
+.container:hover {
+  transform: translateY(-10px);
+}
+
+/* IMAGE ZOOM */
+.image-card img {
+  transition: 0.4s ease;
+}
+
+.image-card:hover img {
+  transform: scale(1.05);
+}
+
+/* BUTTON EFFECT */
+.content button {
+  transition: all 0.3s ease;
+}
+
+.content button:hover {
+  background: #2563eb;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(37,99,235,0.3);
+}
+/* ================= MOBILE FIX ================= */
+@media (max-width: 768px) {
+
+  /* ===== HERO (disable parallax) ===== */
+  .services-hero {
+    height: auto;
+    padding: 80px 20px;
+    background-attachment: scroll;   /* ❗ important */
+  }
+
+  .services-hero h1 {
+    font-size: 28px;
+  }
+
+  .services-hero p {
+    font-size: 14px;
+  }
+
+  /* ===== SERVICES LAYOUT ===== */
+  .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+    padding: 40px 20px;
+  }
+
+  .container.reverse {
+    flex-direction: column;
+  }
+
+  /* ===== IMAGE ===== */
+  .image-card {
+    width: 100%;
+    padding: 0;
+  }
+
+  .image-card img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  /* ===== CONTENT ===== */
+  .content {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .content h2 {
+    font-size: 22px;
+  }
+
+  .content p {
+    font-size: 14px;
+  }
+
+  .content ul li {
+    justify-content: center;
+    font-size: 14px;
+  }
+
+  /* ===== BUTTON ===== */
+  .content button {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  /* ===== GLASS EFFECT FIX ===== */
+  .image-card,
+  .content {
+    backdrop-filter: none;  /* ❗ improves performance */
+    background: #ffffff;    /* clean look */
+  }
+
+  /* ===== HOVER FIX ===== */
+  .container:hover {
+    transform: none;
+  }
+
+  .image-card:hover img {
+    transform: none;
+  }
+
+}
 /*LOGO HEAder part in thnic */
 
 /* ================= FOOTER PREMIUM ================= */
