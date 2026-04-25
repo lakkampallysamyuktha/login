@@ -92,7 +92,7 @@ html, body {
 
   .menu-toggle {
     display: block;      /* ✅ show icon */
-    color: black;        /* ✅ black icon */
+    color: #111;        /* ✅ black icon */
     font-size: 26px;
     cursor: pointer;
   }
@@ -103,7 +103,7 @@ html, body {
     top: 70px;
     right: 20px;
     width: 220px;
-    background: #0f172a;   /* ✅ black dropdown */
+    background: #ffffff    /* ✅ black dropdown */
     flex-direction: column;
     padding: 20px;
     border-radius: 10px;
@@ -114,7 +114,7 @@ html, body {
   }
 
   .nav-links a {
-    color: white;   /* visible text */
+    color: #111 !important;    /* visible text */
     padding: 10px 0;
   }
 
