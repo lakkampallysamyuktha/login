@@ -1719,6 +1719,7 @@ button {
   opacity: 1;
   transform: translateY(0);
 }
+/* ===== MOBILE FIX ===== */
 @media (max-width: 768px) {
 
   .service-container {
@@ -1739,25 +1740,31 @@ button {
     font-size: 14px;
   }
 
- 
+  /* 🔥 IMPORTANT FIX (REMOVE DOTS) */
   .service-text ul {
-    grid-template-columns: 1fr;  /* single column */
+    list-style: none !important;     /* remove bullets */
+    padding-left: 0 !important;      /* remove spacing */
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
-  .service-text li {
+  .service-text ul li {
+    list-style: none !important;
     padding-left: 20px;
     font-size: 14px;
+    position: relative;
   }
 
-  .service-text li::before {
+  /* CUSTOM ICON */
+  .service-text ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
     font-size: 12px;
   }
 
 }
-
-}
-
 
 
 //* PROCESS (cards like screenshot) */
