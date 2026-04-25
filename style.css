@@ -6,21 +6,20 @@
 }
 
 html, body {
-  overflow-x: hidden; /* ✅ NO SIDE SCROLL */
+  overflow-x: hidden;
   font-family: 'Poppins', sans-serif;
+
+  padding-top: 70px; /* 👈 ADD THIS */
 }
 
 /* ================= NAVBAR ================= */
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
-  background: White;
-  color: Black;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1000;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background: #fff;
 }
 /* ===== LOGO CONTAINER ===== */
 .logo {
