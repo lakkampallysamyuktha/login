@@ -78,11 +78,7 @@ html, body {
 
 /* ================= MOBILE NAV ================= */
 
- @media (max-width: 768px) {
-
-  .menu-toggle {
-    display: block;
-  }
+@media (max-width: 768px) {
 
   .nav-links {
     display: none;
@@ -95,11 +91,15 @@ html, body {
     width: 220px;
     padding: 20px;
 
-    background: white;                     /* ✅ WHITE menu */
+    background: white;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   }
 
+  .nav-links.active {
+    display: flex;   /* ✅ matches your JS */
+  }
+}
   .nav-links a {
     color: #111827;     /* dark text */
     padding: 10px 0;
