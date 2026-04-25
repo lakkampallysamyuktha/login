@@ -1133,8 +1133,13 @@ body:not(.auth-page-body) {
 
 
 /* ===== BACKGROUND ===== */
+.auth-page-body {
+  padding-top: 0 !important;
+}
+
+/* ===== CENTER LOGIN ===== */
 .auth-page {
-  height: 100vh;
+  min-height: 100vh;   /* better than height */
   display: flex;
   justify-content: center;
   align-items: center;
