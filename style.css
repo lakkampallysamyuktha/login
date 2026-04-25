@@ -147,26 +147,26 @@ body:not(.auth-page-body) {
   min-height: 100vh;
   padding: 60px 20px;
 }
-  .hero h1 {
-    font-size: 24px;
-    line-height: 1.3;
-  }
+.hero h1 {
+ font-size: 24px;
+ line-height: 1.3;
+}
 
-  .hero p {
-    font-size: 14px;
-  }
+ .hero p {
+ ont-size: 14px;
+ }
 
-  /* NAVBAR FIX */
-  .nav-links {
-    width: 100%;
-    left: 0;
-  }
+ /* NAVBAR FIX */
+ .nav-links {
+ width: 100%;
+  left: 0;
+ }
 
-  /* BUTTON FULL WIDTH */
-  .cta-btn {
-    width: 100%;
-    max-width: 250px;
-  }
+ /* BUTTON FULL WIDTH */
+.cta-btn {
+ width: 100%;
+max-width: 250px;
+}
 
 
 /* ================= HERO PREMIUM ================= */
@@ -1121,13 +1121,13 @@ body:not(.auth-page-body) {
     border-radius: 14px;
   }
 
-}
+
   /* REMOVE EXTRA BORDER SHIFT */
   .about-image::before {
     display: none; /* 🔥 fixes mobile layout */
   }
 
-}
+
 
 /*Login Page  */
 
@@ -1647,7 +1647,7 @@ button:hover {
   
 
 
-//* PROCESS (cards like screenshot) */
+/* PROCESS (cards like screenshot) */
 .process {
   padding: 80px 10%;
   text-align: center;
