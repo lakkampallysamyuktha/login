@@ -83,7 +83,7 @@ html, body {
   display: none;
   font-size: 26px;
   cursor: pointer;
-  color: Black;   /* 👈 IMPORTANT FIX */
+  color: white;   /* 👈 IMPORTANT FIX */
 }
 
 /* ================= MOBILE NAV ================= */
