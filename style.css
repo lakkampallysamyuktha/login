@@ -1296,6 +1296,21 @@ button:hover {
   margin-top: 10px;
   color: #6b7280;
 }
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .process-grid,
+  .pricing-cards,
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
 /*Login Page  */
 
 
