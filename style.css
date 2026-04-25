@@ -1604,19 +1604,29 @@ html, body {
   color: #fff;
 }
 
-/* ===== IMAGE ===== */
+/* ===== IMAGE GRID (REPLACE THIS PART ONLY) ===== */
 .service-image {
   flex: 1;
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  max-width: 320px;
+  margin: auto;
 }
 
 .service-image img {
-  width: 280px;        /* 👈 control size */
-  height: 280px;       /* 👈 perfect square */
+  width: 100%;
+  aspect-ratio: 1/1;   /* 🔥 perfect square */
   object-fit: cover;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+  transition: 0.4s;
+}
+
+/* HOVER */
+.service-image img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
 /* ===== MOBILE ===== */
@@ -1659,10 +1669,10 @@ html, body {
     font-size: 12px;
   }
 
-  .service-image img {
-    width: 200px;
-    height: 200px;
-  }
+ .service-image {
+  max-width: 240px;
+  grid-template-columns: repeat(2, 1fr);
+}
 
 }
 
