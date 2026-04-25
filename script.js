@@ -177,21 +177,35 @@ function logout() {
   window.location.href = "login.html";
 }
 // services page
- const faqs = document.querySelectorAll(".faq-item");
+// ================= MENU TOGGLE =================
+document.addEventListener("DOMContentLoaded", () => {
+
+  // ================= MENU TOGGLE =================
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  }
+
+  // ================= FAQ =================
+  const faqs = document.querySelectorAll(".faq-item");
 
   faqs.forEach(item => {
     const question = item.querySelector(".faq-question");
 
-    question.addEventListener("click", () => {
+    if (question) {
+      question.addEventListener("click", () => {
 
-      // close all
-      faqs.forEach(i => {
-        if (i !== item) i.classList.remove("active");
+        faqs.forEach(i => {
+          if (i !== item) i.classList.remove("active");
+        });
+
+        item.classList.toggle("active");
       });
-
-      // toggle current
-      item.classList.toggle("active");
-
-    });
+    }
   });
 
+});
