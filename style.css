@@ -24,34 +24,27 @@ html, body {
 }
 
 /* ===== LOGO ===== */
-.logo {
-  display: flex;
-  align-items: center;
-}
-
+/* LOGO */
 .logo img {
-  height: 42px;     /* slightly smaller */
+  height: 40px;
   width: auto;
+  max-width: 160px;
+  object-fit: contain;
   display: block;
-  cursor: pointer;
-  transition: 0.3s ease;
 }
 
-/* Hover */
+/* HOVER */
 .logo img:hover {
   transform: scale(1.05);
-  opacity: 0.85;
+  transition: 0.3s;
 }
+
+/* MOBILE */
 @media (max-width: 768px) {
-
-  .navbar {
-    padding: 8px 15px;   /* tighter */
-  }
-
   .logo img {
-    height: 32px;        /* clearly smaller */
+    height: 30px;
+    max-width: 130px;
   }
-
 }
 
 /* MENU */
