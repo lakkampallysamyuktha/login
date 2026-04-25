@@ -1104,7 +1104,7 @@ html, body {
 
 }
 /*Service Page  */
-/* ===== SERVICES HERO ===== */
+/* ===== SERVICES HERO FIX ===== */
 .services-hero {
   width: 100%;
   height: 420px;
@@ -1113,46 +1113,38 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   text-align: center;
 }
 
-/* CENTER CONTROL */
 .hero-content {
   max-width: 800px;
   width: 100%;
   padding: 0 20px;
 }
 
-/* SMALL TEXT */
+/* TEXT */
 .small-text {
   font-size: 14px;
   color: #6b7280;
-  margin-bottom: 10px;
 }
 
-/* TITLE */
 .services-hero h1 {
   font-size: 56px;
   font-weight: 700;
   color: #1f2937;
-  margin-bottom: 20px;
+  margin: 10px 0;
 
-  white-space: nowrap;   /* 🔥 same as about */
+  white-space: nowrap;
 }
 
-/* HIGHLIGHT */
 .services-hero span {
   color: #2563eb;
 }
 
-/* SUB TEXT */
 .sub-text {
   font-size: 18px;
   color: #6b7280;
-  line-height: 1.6;
 }
-
 /* ===== SERVICE LAYOUT FIX ===== */
 .service-section {
   padding: 60px 20px;
