@@ -61,7 +61,7 @@ html, body {
 }
 
 .nav-links a {
-  color: #111;   /* ✅ dark visible */
+  color: #111 !important;   /* 🔥 FORCE DARK COLOR */
   font-weight: 500;
 }
 
