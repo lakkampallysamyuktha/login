@@ -1106,7 +1106,8 @@ html, body {
 }
 /*Service Page  */
 
-  .services-hero {
+ /* ================= HERO ================= */
+.services-hero {
   padding: 120px 20px;
   text-align: center;
 
@@ -1115,7 +1116,6 @@ html, body {
   overflow: hidden;
 }
 
-/* glowing blur */
 .services-hero::before {
   content: "";
   position: absolute;
@@ -1130,32 +1130,25 @@ html, body {
 
 .services-hero h1 {
   font-size: 54px;
-  font-weight: 700;
 }
 
 .services-hero p {
   color: #6b7280;
   margin-top: 10px;
 }
+
+/* ================= SECTION ================= */
+.service-section {
+  margin-bottom: 80px;
+}
+
+/* ================= CONTAINER ================= */
 .container {
   display: flex;
   gap: 50px;
   padding: 80px 10%;
   align-items: center;
-}
 
-.image-card {
-  backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.6);
-  border-radius: 20px;
-  padding: 10px;
-}
-
-.image-card img {
-  width: 320px;
-  border-radius: 15px;
-}
-.container {
   opacity: 0;
   transform: translateY(60px);
   transition: 0.7s ease;
@@ -1165,13 +1158,65 @@ html, body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* REVERSE */
+.container.reverse {
+  flex-direction: row-reverse;
+}
+
+/* ================= IMAGE ================= */
+.image-card {
+  backdrop-filter: blur(15px);
+  background: rgba(255,255,255,0.7);
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.image-card img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+.image-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ================= CONTENT ================= */
+.content {
+  max-width: 500px;
+}
+
+.content h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  color: #6b7280;
+}
+
+/* ICON LIST */
+.content ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.content i {
+  color: #2563eb;
+}
+
+/* ================= BUTTON ================= */
 button {
   background: linear-gradient(135deg,#2563eb,#4f46e5);
   color: white;
   border: none;
   padding: 12px 22px;
   border-radius: 10px;
-
   transition: 0.3s;
 }
 
@@ -1179,22 +1224,72 @@ button:hover {
   transform: translateY(-4px);
   box-shadow: 0 15px 30px rgba(37,99,235,0.3);
 }
-.image-card img {
-  transition: 0.4s;
+
+/* ================= PRICING ================= */
+.pricing {
+  text-align: center;
+  padding: 80px 20px;
 }
 
-.image-card:hover img {
-  transform: scale(1.05);
+.pricing-cards {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
 }
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    text-align: center;
-  }
 
-  .services-hero h1 {
-    font-size: 34px;
-  }
+.price-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  width: 250px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.popular {
+  border: 2px solid #2563eb;
+}
+
+/* ================= TECH ================= */
+.tech {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
+  gap: 15px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.tech-grid div {
+  background: #e5e7eb;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+/* ================= FAQ ================= */
+.faq {
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.faq-item h3 {
+  background: #e5e7eb;
+  padding: 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.faq-item p {
+  display: none;
+  padding: 10px;
+}
+
+.faq-item.active p {
+  display: block;
 }
 
 /*Login Page  */
