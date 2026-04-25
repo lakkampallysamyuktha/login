@@ -5,11 +5,14 @@
   box-sizing: border-box;
 }
 
-html, body {
+html {
   overflow-x: hidden;
-  font-family: 'Poppins', sans-serif;
+}
 
-  padding-top: 80px; /* 👈 ADD THIS */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding-top: 70px; /* match navbar height */
 }
 
 /* ================= NAVBAR ================= */
@@ -129,6 +132,7 @@ html, body {
     padding: 12px;
     display: block;
   }
+  
 
 }
 
