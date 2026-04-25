@@ -99,16 +99,13 @@ function logout() {
 
 // ================= MENU TOGGLE (FINAL FIX) =================
 document.addEventListener("DOMContentLoaded", () => {
-
-  // ===== MENU TOGGLE =====
   const menuToggle = document.getElementById("menu-toggle");
   const navLinks = document.getElementById("nav-links");
 
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  }
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active"); // ✅ FIXED
+  });
+});
 
 //About page
 
@@ -122,6 +119,7 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
 // Dashborad
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -165,4 +163,3 @@ function logout() {
   localStorage.removeItem("currentUser");
   window.location.href = "login.html";
 }
-// services page
