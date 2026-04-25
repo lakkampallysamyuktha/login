@@ -176,3 +176,10 @@ function logout() {
   localStorage.removeItem("currentUser");
   window.location.href = "login.html";
 }
+// services page
+function toggleFAQ(el) {
+  const p = el.nextElementSibling;
+  p.style.display = p.style.display === "block" ? "none" : "block";
+}
+
+
