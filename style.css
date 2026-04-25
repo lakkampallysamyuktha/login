@@ -91,35 +91,38 @@ html, body {
 @media (max-width: 768px) {
 
   .menu-toggle {
-    display: block;      /* ✅ show icon */
-    color: #111;        /* ✅ black icon */
+    display: block;
+    color: #111;
     font-size: 26px;
-    cursor: pointer;
   }
 
   .nav-links {
     display: none;
     position: absolute;
     top: 70px;
-    right: 20px;
-    width: 220px;
-    background: #ffffff    /* ✅ black dropdown */
+    left: 0;                 /* ✅ FULL WIDTH */
+    width: 100%;
+
+    background: #ffffff;     /* ✅ FIXED */
     flex-direction: column;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 20px 0;
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    z-index: 999;
   }
 
   .nav-links.active {
-    display: flex;   /* 🔥 important */
+    display: flex;
   }
 
   .nav-links a {
-    color: #111 !important;    /* visible text */
-    padding: 10px 0;
+    color: #111 !important;
+    padding: 12px;
+    display: block;
   }
 
 }
-
 
 /*  hero*/
 /* HERO FIX */
