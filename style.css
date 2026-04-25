@@ -2079,41 +2079,7 @@ button:hover {
 .faq-item {
   margin-bottom: 12px;
 }
-/* ================= MOBILE FINAL FIX ================= */
-@media (max-width: 768px) {
 
-  /* FIX LAYOUT STACK */
-  .container,
-  .container.reverse {
-    flex-direction: column;
-    text-align: center;
-    gap: 25px;              /* reduce big space */
-    padding: 40px 20px;     /* reduce side spacing */
-  }
-
-  /* FIX IMAGE SIZE */
-  .image-card img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-  }
-
-  /* FIX CONTENT WIDTH */
-  .content {
-    width: 100%;
-  }
-
-  /* TEXT SIZE BETTER FOR MOBILE */
-  .content h2 {
-    font-size: 22px;
-  }
-
-  .content p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-}
 /*LOGO HEAder part in thnic */
 
 /* ================= FOOTER PREMIUM ================= */
