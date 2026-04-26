@@ -1294,14 +1294,13 @@ max-width: 250px;
   left: 50%;
   text-align: left;
 }
-.timeline-item.left .content {
-  margin-right: 40px;
+.timeline-item.left {
+  padding-right: 70px;
 }
 
-.timeline-item.right .content {
-  margin-left: 40px;
+.timeline-item.right {
+  padding-left: 70px;
 }
-
 /* ===== DOT (circle) ===== */
 .timeline-item::before {
   content: '';
