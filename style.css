@@ -1240,9 +1240,11 @@ max-width: 250px;
 }
 /* ===== SECTION ===== */
 /* ===== SECTION ===== */
+
+ /* ===== SECTION ===== */
 .timeline-section {
   background: #f1f5f9;
-  padding: 120px 20px;
+  padding: 100px 20px;
 }
 
 .timeline-section h1 {
@@ -1254,7 +1256,7 @@ max-width: 250px;
 .timeline-section .subtitle {
   text-align: center;
   color: #64748b;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
 }
 
 /* ===== TIMELINE ===== */
@@ -1264,7 +1266,7 @@ max-width: 250px;
   margin: auto;
 }
 
-/* LEFT LINE */
+/* 🔵 VERTICAL LINE */
 .timeline::after {
   content: "";
   position: absolute;
@@ -1272,87 +1274,82 @@ max-width: 250px;
   background: #2563eb;
   top: 0;
   bottom: 0;
-  left: 30px;   /* 👈 LEFT SIDE LINE */
+  left: 20px;   /* ✅ PERFECT ALIGN */
 }
 
 /* ===== ITEM ===== */
 .timeline-item {
   position: relative;
-  margin-bottom: 60px;
-  padding-left: 50px;  /* space for line + dot */
+  margin-bottom: 50px;
+  padding-left: 40px;   /* ✅ REDUCED GAP */
 }
 
-/* DOT */
+/* 🔵 DOT */
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: 12px;
-  top: 25px;
+  left: 14px;   /* ✅ CENTER ON LINE */
+  top: 22px;
   width: 16px;
   height: 16px;
   background: white;
   border: 3px solid #2563eb;
   border-radius: 50%;
+  z-index: 2;
 }
 
-/* CARD */
+/* ===== CARD ===== */
 .content {
   background: white;
-  padding: 25px;
+  padding: 22px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  max-width: 100%;
 }
 
 /* TEXT */
 .content h3 {
   color: #2563eb;
+  font-size: 16px;
   margin-bottom: 5px;
 }
 
 .content h4 {
+  font-size: 18px;
   margin-bottom: 8px;
+  font-weight: 600;
 }
 
 .content p {
-  color: #475569;
   font-size: 14px;
+  color: #475569;
 }
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
-  /* SECTION PADDING */
   .timeline-section {
-    padding: 80px 15px;
+    padding: 70px 15px;
   }
 
-  /* LINE POSITION */
   .timeline::after {
-    left: 10px;   /* move line to left */
+    left: 15px;
   }
 
-  /* ITEM */
   .timeline-item {
-    padding-left: 40px;  /* space for line */
+    padding-left: 35px;
     margin-bottom: 40px;
   }
 
-  /* DOT */
   .timeline-item::before {
-    left: 2px;
-    top: 20px;
+    left: 9px;
+    top: 18px;
     width: 14px;
     height: 14px;
   }
 
-  /* CARD */
   .content {
-    width: 100%;
-    padding: 20px;
-    border-radius: 10px;
-  }
-
-  /* TEXT */
-  .content h3 {
-    font-size: 16px;
+    padding: 18px;
   }
 
   .content h4 {
@@ -1362,7 +1359,6 @@ max-width: 250px;
   .content p {
     font-size: 13px;
   }
-
 }
 /*Login Page  */
 
