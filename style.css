@@ -72,27 +72,52 @@ body:not(.auth-page-body) {
   .logo img {
     height: 35px;      /* smaller on mobile */
   }
+@media (max-width: 768px) {
 
+  .menu-toggle {
+    display: block;
+    font-size: 26px;
+    color: #111;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1000; /* 🔥 important */
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+    color: #111;
+  }
+
+  .nav-links a:hover {
+    color: #2563eb;
+  }
+
+  /* 👇 optional but recommended */
+  .nav-links a.active {
+    color: #2563eb;
+    font-weight: 600;
+  }
+}
 }
 
-/* MENU */
 
-
-.nav-links a {
-  color: #111;
-  font-weight: 500;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #2563eb;
-}
-
-.nav-links a.active {
-  color: #2563eb;
-  font-weight: 600;
-}
 
 /* BUTTON */
 .btn {
@@ -113,42 +138,7 @@ body:not(.auth-page-body) {
 
 /* ================= MOBILE NAV ================= */
 /* ================= MOBILE NAV FIX ================= */
-@media (max-width: 768px) {
 
-  .menu-toggle {
-    display: block;
-    font-size: 26px;
-    color: #111;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: white;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    text-align: center;
-    padding: 20px 0;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links a {
-  padding: 12px;
-  display: block;
-  text-decoration: none;
-  color: #111;
-}
-
-.nav-links a:hover {
-  text-decoration: none;
-  color: #2563eb;
-}
-}
 /*  hero*/
 /* HERO FIX */
 .hero {
@@ -162,7 +152,7 @@ body:not(.auth-page-body) {
 }
 
  .hero p {
- ont-size: 14px;
+ font-size: 14px;
  }
 
  
