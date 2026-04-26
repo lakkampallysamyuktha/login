@@ -79,12 +79,14 @@ body:not(.auth-page-body) {
 
 
 .nav-links a {
-  color: #111 !important;   /* 🔥 FORCE DARK COLOR */
+  color: #111 !important;
   font-weight: 500;
+  text-decoration: none;   /* 🔥 remove underline */
 }
 
 .nav-links a:hover {
   color: #2563eb;
+  text-decoration: none;   /* 🔥 prevent underline on hover */
 }
 
 /* BUTTON */
