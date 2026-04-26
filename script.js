@@ -163,3 +163,20 @@ function logout() {
   localStorage.removeItem("currentUser");
   window.location.href = "login.html";
 }
+// animation
+  const elements = document.querySelectorAll(".animate");
+
+  function reveal() {
+    const trigger = window.innerHeight * 0.85;
+
+    elements.forEach(el => {
+      const top = el.getBoundingClientRect().top;
+
+      if (top < trigger) {
+        el.classList.add("show");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", reveal);
+  reveal();
