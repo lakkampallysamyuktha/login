@@ -1310,16 +1310,17 @@ max-width: 250px;
   background: white;
   border: 3px solid #2563eb;
   border-radius: 50%;
-  top: 50px;
+ top: 50%;
+transform: translateY(-50%);
   z-index: 2;
 }
 
 .timeline-item.left::before {
-  right: -8px;
+  right: -9px;
 }
 
 .timeline-item.right::before {
-  left: -8px;
+  left: -9px;
 }
 
 /* ===== CARD ===== */
@@ -1348,6 +1349,10 @@ max-width: 250px;
   font-size: 14px;
   color: #475569;
 }
+.content:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
@@ -1366,9 +1371,9 @@ max-width: 250px;
     left: 0;
   }
 
-  .timeline-item::before {
-    left: 0;
-  }
+ .timeline-item::before {
+  left: 2px;
+}
 
 }
 /*Login Page  */
