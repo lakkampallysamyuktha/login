@@ -1375,8 +1375,11 @@ max-width: 250px;
   margin-bottom: 10px;
   border-radius: 10px;
   color: #475569;
+  text-decoration: none;   
 }
-
+.sidebar a:hover {
+  text-decoration: none;   /* prevent underline on hover */
+}
 .sidebar a.active {
   background: #2563eb;
   color: white;
