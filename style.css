@@ -1239,19 +1239,20 @@ max-width: 250px;
   }
 }
 /* ===== SECTION ===== */
+/* ===== SECTION ===== */
 .timeline-section {
   background: #f1f5f9;
   padding: 120px 20px;
-  text-align: center;
 }
 
 .timeline-section h1 {
+  text-align: center;
   font-size: 42px;
-  font-weight: 700;
   margin-bottom: 10px;
 }
 
 .timeline-section .subtitle {
+  text-align: center;
   color: #64748b;
   margin-bottom: 70px;
 }
@@ -1263,7 +1264,7 @@ max-width: 250px;
   margin: auto;
 }
 
-/* CENTER LINE */
+/* LEFT LINE */
 .timeline::after {
   content: "";
   position: absolute;
@@ -1271,109 +1272,96 @@ max-width: 250px;
   background: #2563eb;
   top: 0;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 20px;   /* 👈 LEFT SIDE LINE */
 }
 
-/* ===== ITEMS ===== */
+/* ===== ITEM ===== */
 .timeline-item {
   position: relative;
-  width: 50%;
-  padding: 40px 60px;
-  box-sizing: border-box;
+  margin-bottom: 60px;
+  padding-left: 60px; /* space for line + dot */
 }
 
-/* LEFT SIDE */
-.timeline-item.left {
-  left: 0;
-  text-align: right;
-}
-
-/* RIGHT SIDE */
-.timeline-item.right {
-  left: 50%;
-  text-align: left;
-}
-.timeline-item.left {
-  padding-right: 70px;
-}
-
-.timeline-item.right {
-  padding-left: 70px;
-}
-/* ===== DOT (circle) ===== */
+/* DOT */
 .timeline-item::before {
-  content: '';
+  content: "";
   position: absolute;
+  left: 12px;
+  top: 25px;
   width: 16px;
   height: 16px;
   background: white;
   border: 3px solid #2563eb;
   border-radius: 50%;
-top: 65px;
-  z-index: 2;
 }
 
-.timeline-item.left::before {
-  right: -10px;
-  top: 60px;
-}
-
-.timeline-item.right::before {
-  left: -10px;
-  top: 60px;
-}
-/* ===== CARD ===== */
+/* CARD */
 .content {
   background: white;
   padding: 25px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  display: inline-block;
-  max-width: 320px;
 }
 
+/* TEXT */
 .content h3 {
   color: #2563eb;
-  font-size: 18px;
   margin-bottom: 5px;
 }
 
 .content h4 {
-  font-size: 18px;
-  font-weight: 600;
   margin-bottom: 8px;
 }
 
 .content p {
-  font-size: 14px;
   color: #475569;
+  font-size: 14px;
 }
-.content:hover {
-  transform: translateY(-5px);
-  transition: 0.3s;
-}
-
-/* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
+  /* SECTION PADDING */
+  .timeline-section {
+    padding: 80px 15px;
+  }
+
+  /* LINE POSITION */
   .timeline::after {
-    left: 10px;
+    left: 10px;   /* move line to left */
   }
 
+  /* ITEM */
   .timeline-item {
+    padding-left: 40px;  /* space for line */
+    margin-bottom: 40px;
+  }
+
+  /* DOT */
+  .timeline-item::before {
+    left: 2px;
+    top: 20px;
+    width: 14px;
+    height: 14px;
+  }
+
+  /* CARD */
+  .content {
     width: 100%;
-    padding-left: 40px;
-    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
   }
 
-  .timeline-item.right {
-    left: 0;
+  /* TEXT */
+  .content h3 {
+    font-size: 16px;
   }
 
- .timeline-item::before {
-  left: 2px;
-}
+  .content h4 {
+    font-size: 16px;
+  }
+
+  .content p {
+    font-size: 13px;
+  }
 
 }
 /*Login Page  */
