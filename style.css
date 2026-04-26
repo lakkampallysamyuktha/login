@@ -41,6 +41,14 @@ body:not(.auth-page-body) {
   margin-left: auto;
   align-items: center;
 }
+.nav-links a {
+  text-decoration: none;
+  color: #111;
+}
+.nav-links a:hover {
+  text-decoration: none;   /* extra safety */
+  color: #2563eb;
+}
 /* ===== LOGO CONTAINER ===== */
 .logo {
   display: flex;
