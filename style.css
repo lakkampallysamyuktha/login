@@ -1272,14 +1272,14 @@ max-width: 250px;
   background: #2563eb;
   top: 0;
   bottom: 0;
-  left: 20px;   /* 👈 LEFT SIDE LINE */
+  left: 30px;   /* 👈 LEFT SIDE LINE */
 }
 
 /* ===== ITEM ===== */
 .timeline-item {
   position: relative;
   margin-bottom: 60px;
-  padding-left: 60px; /* space for line + dot */
+  padding-left: 50px;  /* space for line + dot */
 }
 
 /* DOT */
