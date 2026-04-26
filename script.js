@@ -71,23 +71,23 @@ function login() {
   }
 }
 // ================= SHOW USER NAME =================
-window.onload = function () {
+// window.onload = function () {
 
-  let currentUser = JSON.parse(localStorage.getItem("currentUser"));
+//   let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 
-  if (currentUser) {
-    let userText = document.getElementById("welcomeUser");
-    let adminText = document.getElementById("welcomeAdmin");
+//   if (currentUser) {
+//     let userText = document.getElementById("welcomeUser");
+//     let adminText = document.getElementById("welcomeAdmin");
 
-    if (userText) {
-      userText.innerText = "Welcome " + currentUser.name + " 🎉";
-    }
+//     if (userText) {
+//       userText.innerText = "Welcome " + currentUser.name + " 🎉";
+//     }
 
-    if (adminText) {
-      adminText.innerText = "Welcome Admin " + currentUser.name + " 🔥";
-    }
-  }
-};
+//     if (adminText) {
+//       adminText.innerText = "Welcome Admin " + currentUser.name + " 🔥";
+//     }
+//   }
+// };
 
 
 // ================= LOGOUT =================
