@@ -1265,10 +1265,10 @@ max-width: 250px;
 }
 
 /* ===== CARD ===== */
-.content {
+.timeline-content {
   width: 100%;
-  max-width: 700px;   /* ⭐ CONTROL SIZE */
-  margin: 0 auto;     /* EXTRA SAFETY CENTER */
+  max-width: 700px;
+  margin: 0 auto;
 
   background: white;
   padding: 28px 32px;
@@ -1277,7 +1277,6 @@ max-width: 250px;
 
   text-align: left;
 }
-  /* 🔥 ANIMATION */
   opacity: 0;
   transform: translateY(40px);
   animation: fadeUp 0.8s ease forwards;
