@@ -72,7 +72,6 @@ body:not(.auth-page-body) {
   .logo img {
     height: 35px;      /* smaller on mobile */
   }
-@media (max-width: 768px) {
 
   .menu-toggle {
     display: block;
@@ -115,7 +114,7 @@ body:not(.auth-page-body) {
     font-weight: 600;
   }
 }
-}
+
 
 
 
