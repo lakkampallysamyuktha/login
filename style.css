@@ -842,22 +842,6 @@ max-width: 250px;
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
   .about-grid {
     grid-template-columns: 1fr;
   }
