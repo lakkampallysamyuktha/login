@@ -26,10 +26,8 @@ body:not(.auth-page-body) {
   top: 0;
   left: 0;
   width: 100%;
-
   z-index: 9999;
   background: #ffffff;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -75,23 +73,9 @@ body:not(.auth-page-body) {
 
   .menu-toggle {
     display: block;
-    font-size: 26px;
-    color: #111;
-    cursor: pointer;
   }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: white;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    text-align: center;
-    padding: 20px 0;
-    z-index: 1000; /* 🔥 important */
-  }
+ 
 
   .nav-links.active {
     display: flex;
@@ -114,10 +98,6 @@ body:not(.auth-page-body) {
     font-weight: 600;
   }
 }
-
-
-
-
 /* BUTTON */
 .btn {
   background: linear-gradient(45deg,#6366f1,#7c3aed);
@@ -132,11 +112,36 @@ body:not(.auth-page-body) {
   display: none;
   font-size: 26px;
   cursor: pointer;
-  color: white;   /* ✅ FIXED */
+  color: #111;  
 }
 
 /* ================= MOBILE NAV ================= */
 /* ================= MOBILE NAV FIX ================= */
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+}
 
 /*  hero*/
 /* HERO FIX */
