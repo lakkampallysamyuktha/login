@@ -1243,100 +1243,100 @@ max-width: 250px;
 .timeline-section {
   background: #f8fafc;
   padding: 100px 20px;
+  text-align: center;
 }
 
 /* ===== TIMELINE ===== */
 .timeline {
-  position: relative;
-  max-width: 900px;
+  max-width: 800px;
   margin: auto;
-}
-
-/* 🔵 VERTICAL LINE */
-.timeline::after {
-  content: "";
-  position: absolute;
-  width: 2px;
-  background: #2563eb;
-  top: 0;
-  bottom: 0;
-  left: 40px;   /* ⭐ line position */
 }
 
 /* ===== ITEM ===== */
 .timeline-item {
-  position: relative;
-  margin-bottom: 50px;
-  padding-left: 85px;   /* ⭐ PERFECT NO GAP */
-}
-
-/* 🔵 DOT */
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: 30px;
-  top: 22px;
-  width: 18px;
-  height: 18px;
-  background: #2563eb;
-  border-radius: 50%;
-  z-index: 2;
-}
-
-/* YEAR */
-.timeline-item span {
-  position: absolute;
-  left: 20px;
-  top: -5px;
-  font-size: 12px;
-  font-weight: bold;
-  color: #2563eb;
+  margin-bottom: 40px;
 }
 
 /* ===== CARD ===== */
 .content {
   background: white;
-  padding: 20px 25px;
-  border-radius: 10px;
+  padding: 25px;
+  border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: 0.3s;
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+
+  /* 🔥 ANIMATION */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
 }
 
-.content:hover {
-  transform: translateY(-4px);
+/* DELAY FOR EACH CARD */
+.timeline-item:nth-child(1) .content { animation-delay: 0.2s; }
+.timeline-item:nth-child(2) .content { animation-delay: 0.4s; }
+.timeline-item:nth-child(3) .content { animation-delay: 0.6s; }
+
+/* KEYFRAMES */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* TEXT */
-.content h4 {
-  font-size: 18px;
-  margin-bottom: 6px;
-  font-weight: 600;
+.content h3 {
+  color: #2563eb;
 }
 
 .content p {
-  font-size: 14px;
   color: #475569;
 }
-
-/* ===== MOBILE ===== */
+.content:hover {
+  transform: translateY(-5px);
+}
+/* ===== MOBILE VIEW ===== */
 @media (max-width: 768px) {
 
-  .timeline::after {
-    left: 20px;
+  .timeline-section {
+    padding: 60px 15px;
+  }
+
+  .timeline {
+    max-width: 100%;
   }
 
   .timeline-item {
-    padding-left: 60px;
+    margin-bottom: 30px;
   }
 
-  .timeline-item::before {
-    left: 12px;
+  .content {
+    width: 100%;          /* full width on mobile */
+    max-width: 100%;
+    padding: 18px;
+    border-radius: 10px;
   }
 
-  .timeline-item span {
-    left: 8px;
+  .timeline-section h1 {
+    font-size: 28px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  .content h4 {
+    font-size: 16px;
+  }
+
+  .content p {
+    font-size: 13px;
   }
 }
+
 /*Login Page  */
 
 
