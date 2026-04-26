@@ -1240,23 +1240,9 @@ max-width: 250px;
 }
 /* ===== SECTION ===== */
 /* ===== SECTION ===== */
-
- /* ===== SECTION ===== */
 .timeline-section {
-  background: #f1f5f9;
+  background: #f8fafc;
   padding: 100px 20px;
-}
-
-.timeline-section h1 {
-  text-align: center;
-  font-size: 42px;
-  margin-bottom: 10px;
-}
-
-.timeline-section .subtitle {
-  text-align: center;
-  color: #64748b;
-  margin-bottom: 60px;
 }
 
 /* ===== TIMELINE ===== */
@@ -1270,53 +1256,60 @@ max-width: 250px;
 .timeline::after {
   content: "";
   position: absolute;
-  width: 3px;
+  width: 2px;
   background: #2563eb;
   top: 0;
   bottom: 0;
-  left: 20px;   /* ✅ PERFECT ALIGN */
+  left: 40px;   /* ⭐ line position */
 }
 
 /* ===== ITEM ===== */
 .timeline-item {
   position: relative;
   margin-bottom: 50px;
-  padding-left: 40px;   /* ✅ REDUCED GAP */
+  padding-left: 85px;   /* ⭐ PERFECT NO GAP */
 }
 
 /* 🔵 DOT */
 .timeline-item::before {
   content: "";
   position: absolute;
-  left: 14px;   /* ✅ CENTER ON LINE */
+  left: 30px;
   top: 22px;
-  width: 16px;
-  height: 16px;
-  background: white;
-  border: 3px solid #2563eb;
+  width: 18px;
+  height: 18px;
+  background: #2563eb;
   border-radius: 50%;
   z-index: 2;
+}
+
+/* YEAR */
+.timeline-item span {
+  position: absolute;
+  left: 20px;
+  top: -5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #2563eb;
 }
 
 /* ===== CARD ===== */
 .content {
   background: white;
-  padding: 22px;
-  border-radius: 12px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  max-width: 100%;
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.content:hover {
+  transform: translateY(-4px);
 }
 
 /* TEXT */
-.content h3 {
-  color: #2563eb;
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-
 .content h4 {
   font-size: 18px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   font-weight: 600;
 }
 
@@ -1328,36 +1321,20 @@ max-width: 250px;
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
-  .timeline-section {
-    padding: 70px 15px;
-  }
-
   .timeline::after {
-    left: 15px;
+    left: 20px;
   }
 
   .timeline-item {
-    padding-left: 35px;
-    margin-bottom: 40px;
+    padding-left: 60px;
   }
 
   .timeline-item::before {
-    left: 9px;
-    top: 18px;
-    width: 14px;
-    height: 14px;
+    left: 12px;
   }
 
-  .content {
-    padding: 18px;
-  }
-
-  .content h4 {
-    font-size: 16px;
-  }
-
-  .content p {
-    font-size: 13px;
+  .timeline-item span {
+    left: 8px;
   }
 }
 /*Login Page  */
