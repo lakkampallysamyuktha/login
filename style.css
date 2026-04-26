@@ -1209,25 +1209,17 @@ max-width: 250px;
 
 /* Hover (very soft like your image) */
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.05);
+  background: #eff6ff;   /* light blue */
+  border-color: #2563eb;
 }
 
-/* Icon */
-.card i {
-  font-size: 30px;
+.card:hover h3 {
   color: #2563eb;
-  margin-bottom: 15px;
 }
 
-/* Title */
-.card h3 {
-  font-size: 18px;
-  color: #111827;
-  margin-bottom: 10px;
+.card:hover i {
+  color: #2563eb;
 }
-
-/* Text */
 .card p {
   font-size: 14px;
   color: #6b7280;
