@@ -133,9 +133,16 @@ body:not(.auth-page-body) {
   }
 
   .nav-links a {
-    padding: 12px;
-    display: block;
-  }
+  padding: 12px;
+  display: block;
+  text-decoration: none;
+  color: #111;
+}
+
+.nav-links a:hover {
+  text-decoration: none;
+  color: #2563eb;
+}
 }
 /*  hero*/
 /* HERO FIX */
