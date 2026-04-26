@@ -61,7 +61,7 @@ function login() {
   localStorage.setItem("currentUser", JSON.stringify(user));
 
   // SUCCESS
-  alert(`Welcome ${user.name} 🎉\nRole: ${user.role}`);
+  
 
   // REDIRECT BASED ON ROLE
   if (user.role === "admin") {
