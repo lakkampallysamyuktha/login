@@ -132,7 +132,7 @@ body:not(.auth-page-body) {
   display: none;
   font-size: 26px;
   cursor: pointer;
-  color: white;   /* 👈 IMPORTANT FIX */
+  color: #111;   /* ✅ FIXED */
 }
 
 /* ================= MOBILE NAV ================= */
