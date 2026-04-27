@@ -260,9 +260,20 @@ max-width: 250px;
   animation: fadeSlideRight 1s ease forwards;
 }
 
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero-right img {
   width: 100%;
+  max-width: 480px;   /* 👈 control size */
+  height: auto;
+  object-fit: contain;
+
   border-radius: 20px;
+
   animation: floatImage 4s ease-in-out infinite;
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
