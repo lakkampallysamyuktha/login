@@ -14,7 +14,7 @@ body {
   margin: 0;
 }
 
-/* 👇 ADD THIS BELOW */
+/*  */
 body:not(.auth-page-body) {
   padding-top: 70px;
 }
@@ -268,7 +268,7 @@ max-width: 250px;
 
 .hero-right img {
   width: 100%;
-  max-width: 480px;   /* 👈 control size */
+  max-width: 480px;   
   height: auto;
   object-fit: contain;
 
@@ -732,7 +732,7 @@ max-width: 250px;
 /* image */
 .blog-img img {
   width: 100%;
-  height: 180px;        /* equal size */
+  height: 180px;        
   object-fit: cover;
   display: block;
   transition: transform 0.4s ease;
@@ -752,7 +752,7 @@ max-width: 250px;
 
 /* CONTENT */
 .blog-content {
-  padding: 16px; /* reduced padding */
+  padding: 16px; 
   text-align: left;
 }
 
@@ -779,7 +779,7 @@ max-width: 250px;
   margin-bottom: 12px;
 }
 
-/* READ MORE */
+
 .read-more {
   color: #3b82f6;
   font-weight: 600;
@@ -1105,7 +1105,7 @@ max-width: 250px;
 
   .about-hero h1 {
     font-size: 32px;
-    white-space: normal; /* allow wrap on mobile */
+    white-space: normal; 
   }
 
   .about-hero p {
@@ -1232,9 +1232,9 @@ max-width: 250px;
   transition: all 0.3s ease;
 }
 
-/* Hover (very soft like your image) */
+/* Hover  */
 .card:hover {
-  background: #eff6ff;   /* light blue */
+  background: #eff6ff;   
   border-color: #2563eb;
 }
 
@@ -1635,9 +1635,8 @@ max-width: 250px;
 .pending { background: #fde68a; }
 .done { background: #bbf7d0; }
 
-/* MOBILE */
-/* ===== MOBILE FIX ===== */
-/* ===== MOBILE APP STYLE ===== */
+
+/* ===== MOBILE ===== */
 @media (max-width: 768px) {
 
   /* HIDE SIDEBAR */
@@ -1790,11 +1789,6 @@ max-width: 250px;
   }
 
 }
-
-
-/* ===== SERVICE SECTION ===== */
-/* ===== SERVICE SECTION ===== */
-/* ===== SERVICE SECTION ===== */
 /* ===== SECTION ===== */
 .service-section {
   padding: 80px 20px;
@@ -1902,11 +1896,7 @@ button:hover {
   }
 
 }
-
-  
-
-
-/* PROCESS (cards like screenshot) */
+/* PROCESS  */
 .process {
   padding: 80px 10%;
   text-align: center;
@@ -2335,10 +2325,6 @@ button:hover {
 
 
 /*Contact page  */
-
-
-
-
 /* ===== CONTACT CARDS ===== */
 /* ===== CONTACT CARDS ===== */
 .contact-cards {
