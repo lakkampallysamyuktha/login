@@ -22,7 +22,7 @@ body:not(.auth-page-body) {
 /* ================= NAVBAR ================= */
 /* ===== FORCE FIXED HEADER ===== */
 .navbar {
-  position: fixed;   /* 🔥 force fix */
+  position: fixed;  
   top: 0;
   left: 0;
   width: 100%;
@@ -46,7 +46,7 @@ body:not(.auth-page-body) {
   color: #111;
 }
 .nav-links a:hover {
-  text-decoration: none;   /* extra safety */
+  text-decoration: none;   
   color: #2563eb;
 }
 /* ===== LOGO CONTAINER ===== */
@@ -58,7 +58,7 @@ body:not(.auth-page-body) {
 
 /* ===== LOGO IMAGE ===== */
 .logo img {
-  height: 45px;        /* desktop size */
+  height: 45px;       
   width: auto;
   max-width: 100%;
   display: block;
@@ -76,7 +76,7 @@ body:not(.auth-page-body) {
 @media (max-width: 768px) {
 
   .logo img {
-    height: 35px;      /* smaller on mobile */
+    height: 35px;     
   }
 
   .menu-toggle {
@@ -100,7 +100,7 @@ body:not(.auth-page-body) {
     color: #2563eb;
   }
 
-  /* 👇 optional but recommended */
+ 
   .nav-links a.active {
     color: #2563eb;
     font-weight: 600;
@@ -269,7 +269,7 @@ max-width: 250px;
 
 /* ================= ANIMATIONS ================= */
 
-/* TEXT LEFT */
+
 @keyframes fadeSlideLeft {
   from {
     opacity: 0;
@@ -409,7 +409,7 @@ max-width: 250px;
     gap: 25px;
   }
 
-  /* 🔥 IMAGE FIRST */
+ 
   .about-image {
     order: -1;
     width: 100%;
@@ -590,7 +590,7 @@ max-width: 250px;
   margin-top: 50px;
 }
 
-/* ✅ CARD (IMPORTANT FIX) */
+
 .testimonial-card {
   background: #ffffff;
   padding: 30px;
@@ -651,7 +651,7 @@ max-width: 250px;
   color: #6b7280;
 }
 
-/* ✅ RESPONSIVE */
+/*  RESPONSIVE */
 @media (max-width: 900px) {
   .testimonial-container {
     grid-template-columns: 1fr;
@@ -1007,7 +1007,7 @@ max-width: 250px;
   color: #1f2937;
   margin-bottom: 20px;
 
-  white-space: nowrap; /* 🔥 FIX LINE BREAK */
+  white-space: nowrap; 
 }
 
 /* TEXT */
@@ -1115,7 +1115,7 @@ max-width: 250px;
 
   /* REMOVE EXTRA BORDER SHIFT */
   .about-image::before {
-    display: none; /* 🔥 fixes mobile layout */
+    display: none; 
   }
 
 /*  */
@@ -1253,14 +1253,14 @@ max-width: 250px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: center;   /* ⭐ FORCE CENTER */
+  align-items: center;   
 }
 
 /* ===== ITEM ===== */
 .timeline-item {
   width: 100%;
   display: flex;
-  justify-content: center;  /* ⭐ CENTER EACH CARD */
+  justify-content: center; 
   margin-bottom: 35px;
 }
 
@@ -1322,7 +1322,7 @@ max-width: 250px;
   }
 
   .content {
-    width: 100%;          /* full width on mobile */
+    width: 100%;         
     max-width: 100%;
     padding: 18px;
     border-radius: 10px;
@@ -1486,7 +1486,7 @@ max-width: 250px;
   text-decoration: none;   
 }
 .sidebar a:hover {
-  text-decoration: none;   /* prevent underline on hover */
+  text-decoration: none;  
 }
 .sidebar a.active {
   background: #2563eb;
@@ -1638,7 +1638,7 @@ max-width: 250px;
   .content {
     margin: 0;
     padding: 15px;
-    padding-bottom: 80px; /* space for bottom nav */
+    padding-bottom: 80px; 
   }
 
   /* CARDS STACK */
@@ -1785,13 +1785,13 @@ max-width: 250px;
   gap: 40px;
 }
 
-/* 🔥 MAKE CONTENT LEFT */
+/*  MAKE CONTENT LEFT */
 .content {
   order: 1;
   flex: 1;
 }
 
-/* 🔥 IMAGE RIGHT */
+/* IMAGE RIGHT */
 .image-card {
   order: 2;
   flex: 0;
@@ -1802,7 +1802,7 @@ max-width: 250px;
 /* ===== SMALL SQUARE IMAGE ===== */
 
 .image-card img {
-  width: 180px;   /* 👈 increased size */
+  width: 180px;   
   height: 180px;
   object-fit: cover;
   border-radius: 14px;
@@ -2322,7 +2322,7 @@ button:hover {
   padding: 0 20px;
 
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 👈 DESKTOP 3 CARDS */
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
