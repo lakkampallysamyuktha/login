@@ -205,3 +205,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+// ===== CONTACT FORM REDIRECT =====
+document.addEventListener("DOMContentLoaded", () => {
+
+  const form = document.getElementById("contactForm");
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // stop reload
+
+      // redirect to 404 page
+      window.location.href = "404.html";
+    });
+  }
+
+});
