@@ -182,22 +182,26 @@ function logout() {
   reveal();
 
 
-// ===== FAQ TOGGLE =====
-const faqItems = document.querySelectorAll(".faq-item");
 
-faqItems.forEach(item => {
-  const question = item.querySelector(".faq-question");
+// ===== FAQ TOGGLE (FIXED) =====
+document.addEventListener("DOMContentLoaded", () => {
 
-  question.addEventListener("click", () => {
+  const faqItems = document.querySelectorAll(".faq-item");
 
-    // close all other items
-    faqItems.forEach(i => {
-      if (i !== item) {
-        i.classList.remove("active");
-      }
+  faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+
+      // close others
+      faqItems.forEach(i => {
+        if (i !== item) i.classList.remove("active");
+      });
+
+      // toggle current
+      item.classList.toggle("active");
     });
 
-    // toggle current
-    item.classList.toggle("active");
   });
+
 });
